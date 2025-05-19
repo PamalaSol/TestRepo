@@ -1,0 +1,56 @@
+{
+	"title": "Fluid Control Solutions",
+	"description": "Our innovative products are defined by precision & quality and can meet all of your specific needs.",
+
+	"s2Title": "Custom Fluid Solutions",
+	"s2Desc": "To meet the high demands of customers, special constructions and tailor-made solutions are sometimes necessary. In close collaboration with the customer, HO-Matic develops customized pinch valve designs. Meanwhile, there are various customer-specific versions that distinguish themselves from standard configurations through connections, material choices, or functionality. A WIN-WIN situation.",
+	"line1": "Ready to get started?",
+	"line2": "We are here for you.",
+	"contact": "Contact Us",
+	"noData": "No data found",
+	"serverError": "Server error occurred.",
+	"unexpectedError": "Unexpected error occurred.",
+	"addToCart": "Item added to cart.",
+	"add": "Add to cart",
+	"suitable": "Especially suitable for:",
+
+	"customSol": "Custom Solutions",
+	"customSolDesc": "Tailored to meet your specific needs, our custom solutions provide innovative and bespoke valve configurations. Let our expertise in customization bring your unique valve requirements to life, ensuring unparalleled performance.",
+
+	"Tri-Clamp": "Tri-Clamp",
+	"Flange": "Flange",
+	"Threaded Cover": "Threaded cover",
+	"O-ring": "O-Ring",
+	"Screw Connection": "Screw connection",
+	"Clamping Cone": "Clamping cone",
+	"Clamping Ring": "Clamping ring",
+	"Threaded Ring": "Threaded ring",
+	"Threaded Cap": "Threaded cap",
+
+	"POM white / POM-ELS": "POM plastic",
+	"Aluminium": "Aluminium alloy",
+	"Cast aluminum": "Aluminium casting",
+	"Stainless steel": "Stainless steel",
+	"Alu6026": "Aluminium alloy 6026",
+
+	"size": "Size",
+	"selectSize": "Size",
+	"Connection": "Connection",
+	"selConnection": "Connection",
+	"housingMat": "Housing material",
+	"selhousingMat": "Housing material",
+	"quality": "Sleeve quality",
+	"selQuality": "Sleeve quality",
+	"search": "Search - type here what you are looking for",
+	"notFound": "Products category not found!",
+
+	"series": "Series",
+	"sQuality": "Sleeves Quality",
+	"version": "Version",
+	"standard": "Standard",
+	"atexVer": "ATEX-Versions",
+
+	"parts": "Spare parts",
+	"servInst": "Service instructions",
+	"cads": "CAD data"
+}

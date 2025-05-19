@@ -1,0 +1,26 @@
+{
+
+    "q1":"How does a HO-Matic Pinch Valve work?",
+    "a1":"The highly elastic hose sleeve anchored in the valve housing is surrounded by the so-called control chamber. If compressed air is applied to this space, the hose sleeve, which is initially round, deforms, becomes oval and then folds flat in a predetermined position. The pinch valve is now closed as long as the control pressure continues.",    
+    "q2":"How to choose the right sleeve quality for my industry?",
+    "a2":"The choice of sleeve depends on the medium. To check the chemical resistance of a sleeve, consult one of the many resistance lists on the Internet or directly from HO-Matic AG. If several rubber materials are compatible with the desired medium, then natural rubber (the most commonly used material!) is always the first choice!",    
+    "q3":"Can I dose with a HO-Matic Pinch Valve?",
+    "a3":"The pinch valve can be controlled with a proportional pressure controller (PPC). This allows flows or bulk materials to be dosed.",    
+    "q4":"Do you have FDA certified Pinch Valves?",
+    "a4":"Yes, many of the HO-Matic pinch valves can also be ordered in 'FDA'. Declaration of Conformity.",    
+    "q5":"Do you have ATEX certified Pinch Valves? ",
+    "a5":"Special versions of HO-Matic pinch valves are also ATEX-compliant and approved for Ex zones 0, 1, 2, 20, 21 and 22. You can also find the necessary declaration of conformity on our website (download). note: ATEX-compliant sleeves are always black!",    
+    "q6":"Up to what temperature can I use the HO-Matic Pinch Valve?",
+    "a6":"Due to the quality of the rubber, pinch valves can only be used up to a maximum temperature of 120° C with special EPDM quality. All other sleeve qualities can only be used in temperature ranges up to a maximum of 70-90° C!",    
+    "q7":"Does the HO-Matic Pinch Valve close air tight?",
+    "a7":"From approx. 2.5 bar differential pressure (control pressure minus operating pressure), the HO-Matic pinch valve closes air-tight, even with bulk goods and solids. Possible thanks to the closing distance. The elastomer sleeve closes over a longer area and gently encloses the conveyed material.",    
+    "q8":"Are the HO-Matic Pinch Valves suitable for liquids, solids, and gas?",
+    "a8":"HO-Matic pinch valves are suitable for almost all media and are often considered real problem solvers.",    
+    "q9":"Are HO-Matic Pinch Valves dead space-free? ",
+    
+    "a9":"Our valves are largely free of dead space. The patented QSV series is particularly noteworthy here, in which nothing other than the mirror-smooth elastomer comes into contact with the medium.",    
+    "q10":"Can I use a HO-Matic Pinch Valve in a vacuum?",
+    "a10":"Vacuum technology is a very large area of application for HO-Matic pinch valves. Depending on the diameter of the valves and the pressure range (negative pressure), the control room must be compensated. We are happy to provide you with further information at any time.",    
+    "q11":"How much pressure is needed to close the Pinch Valves air-tight?",
+    "a11":"The required control pressure (from the compressed air network) of the pinch valve depends on the rubber quality and diameter of the sleeve. Normally, all sleeves can be closed 100% with a differential pressure of approx. 2.5 bar. Only the FPM quality requires more pressure!"
+}

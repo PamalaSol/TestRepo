@@ -1,0 +1,15 @@
+{
+
+    "Reusable toasts":"",
+    "noData":"No data found",
+    "serverError":"Server error occurred.",
+    "unexpectedError":"Unexpected error occurred.",
+    "addToCart":"Item added to cart.",
+
+    "Footer specific":"",
+    "clipboard":"Copied E-mail to clipborad.",
+
+    "Sleeve specific":"",
+    "seriesFirst":"Please select the pinch valve series first.",
+    "orderError":"Please select all parameters from the table before placing order."
+}

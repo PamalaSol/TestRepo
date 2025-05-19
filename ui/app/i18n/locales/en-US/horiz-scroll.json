@@ -1,0 +1,90 @@
+{
+	"mainTitle": "Leading the Industry in Pinch Valve Excellence",
+	"mainDesc": "High-quality, durable, patented solutions tailored to each of your unique needs - applicable across all industries. We stand as the leading manufacturer of pneumatic pinch valves, renowned for our commitment to excellence in fluid control since 1977.",
+	"link": "Explore Products",
+	"welcome": "Welcome to HO-Matic",
+	"welcomeDesc": "Our mission is to empower our partners with the highest quality pinch valves and products capable of conquering the most demanding applications. HO-Matic's dedication to precision, innovation, and unwavering quality sets us apart, ensuring that when you choose us, you choose a reliable partner in fluid control solutions that can handle anything.",
+	"welcomeLink": "Learn more",
+	"pv": "HO-Matic Pinch Valves",
+	"pvDesc": "Engineered for durability and efficiency, our pinch valves are perfect for handling even the most demanding applications.",
+	"controls": "Controls & Accessories",
+	"cDesc": "Enhance your valve performance with our comprehensive range of controls and accessories. Designed for seamless integration, these products offer you the flexibility and reliability needed for optimal valve operation.",
+	"spareSleeves": "Spare Sleeves",
+	"ssDesc": "Maintain your valves' peak performance with high quality sleeves. Crafted for longevity and perfect fit, our sleeves are the ideal solution for cost-effective valve maintenance.",
+	"customSol": "Custom Solutions",
+	"customSolDesc": "Tailored to meet your specific needs, our custom solutions provide innovative and bespoke valve configurations. Let our expertise in customization bring your unique valve requirements to life, ensuring unparalleled performance.",
+	"sideText": "PINCH VALVES REDIFINED",
+
+	"p1heading": "DN40, Series 20 - Our Star in Square Form with Short Installation Length",
+	"p1description": "The POM40 emerged from the customer's desire for a rectangular housing with a short installation length. Today, it is a millions-sold pinch valve in the powder coating and paint industry.",
+
+	"p2heading": "QSV65, Series 40 - Our Patented Problem Solver",
+	"p2description": "The QSV Pinch Valve excels with abrasive media and delicate products. Its patented sleeve with an integrated bayonet closure allows for a rapid and straightforward sleeve replacement – a unique feature in the market!",
+
+	"p3heading": "DN20, Series 10 - Proven for Decades in Harsh Environments",
+	"p3description": "Robust, indestructible, and cost-effective, DN20 has proven itself over the decades, remaining a bestseller. Frequently found in vehicle and apparatus construction and rail systems.",
+
+	"partners": "Our Esteemed Partners",
+	"partnersD": "At the heart of our innovation and success are our partnerships. We collaborate closely with leading industry experts to bring you state-of-the-art solutions. These collaborations enable us to expand our expertise, enhance our product offerings, and deliver superior value to our customers. Together, we're shaping the future of valve technology!",
+
+	"p1Title": "Buschjost Magnetventile",
+	"p1Heading": "Magnetventile",
+	"p1Desc": "The Buschjost process valve range includes a variety of different solenoid valves and air-operated valves for controlling and regulating gaseous and liquid media in pressure-carrying pipelines.",
+
+	"p2Title": "Ross Europa GmbH",
+	"p2Heading": "Pneumatikventile",
+	"p2Desc": "Premium pneumatics without limits - since 1960. Your consultant and supplier of solenoid valves and problem solvers for the control and shut-off of medium-carrying pipelines.",
+
+	"hello": "Say hello",
+    "pages": "Pages",
+    "home": "Home",
+    "products": "Products",
+    "resources": "Resources",
+    "news": "News",
+    "about": "About us",
+    "contact": "Contact",
+
+    "imprint": "Imprint",
+    "licenses": "Licenses",
+    "terms": "Terms",
+    "data": "Data",
+	"cart":"Cart",
+
+	"noProducts":"No products found",
+	"series": "Series",
+
+	"pinchValvesMn": "Pinch Valves",
+	"customSolutionsMn": "Custom solutions",
+	"sleevesMn": "Sleeves",
+	"controlsMn": "Controls",
+	"commercialProductsMn": "Commercial products",
+
+	"noData":"No data found",
+	"serverError":"Server error occurred.",
+	"unexpectedError":"Unexpected error occurred.",
+	
+	"search":"Search",
+	
+	"touch":"Get in touch",
+	"metaDesc":"Our high-quality, patented pneumatic pinch valves are designed for various industries, ensuring durability and precision. Discover Swiss excellence with HO-Matic.",
+	"sent": "Message sent!",
+	"notSend": "Message sending failed.",
+	"sleeveSearchText":"NR (FDA, ATEX) natural rubber for abrasive media NBR (FDA, ATEX) fluorocarbon rubber chemical resistant CSM Chlorosulfonated polyethylene for chemicals and oxidizing media FPM natural rubber for fuels, oils, greases CR chloroprene rubber ozone resistant EPDM ethylene-propylene rubber for chemicals, strong heat resistance Spare Sleeves and Accessories HO-Matic sleeves are made from specially developed elastomer compounds with special fabric inserts to meet the high requirements in terms of robustness, high elasticity, reset force and durability. The elastic pneumatically actuated sleeve blocks the product flow with differential pressure of 2-3 bar (depending on the elastomer quality) and thanks to its high rebound elasticity - automatically returns to its original open position when the compressed air is released.",
+	"brochure": "Brochure",
+	"parts": "Spare parts",
+	"manufacturer": "Manufacturer's declaration / declaration of conformity",
+	"videos": "Videos: functionality & sleeve replacement",
+	"cads": "CAD data",
+	"instructions": "Instructions",
+	"dataSheets": "Data sheets",
+	"clipboard":"Copied E-mail to clipboard.",
+
+	"SM": "Social media",
+
+	"notice":"Site notice",
+	"privPol": "Privacy policy",
+	"policyTitle":"Privacy policy",
+	"policyText":"I agree that my details from the contact form will be collected and processed to answer my request. Your request will be sent encrypted via HTTPS to our server. The data will be deleted after the processing of your request. You can revoke your consent at any time for the future via email to info@ho-matic.ch. Detailed information on handling user data can be found in our privacy policy."
+
+
+}

@@ -1,0 +1,15 @@
+{
+	"title": "Welcome to HO-Matic's Resource Hub!",
+	"desc": "Here, you will find all the valuable resources to enhance your experience with our products. From comprehensive brochures that delve deep into our innovative offers to clear, step-by-step instructions for seamless operation, our resources are designed to empower you with the knowledge and tools you need for optimal performance. Explore our downloads section and unlock the full potential of HO-Matic's world-class solutions.",
+	"brochure": "Brochure",
+	"parts": "Spare parts",
+	"manufacturer": "Manufacturer's declaration / declaration of conformity",
+	"videos": "Videos: functionality & sleeve replacement",
+	"noData": "No data found",
+	"unexpectedError": "Unexpected error occurred.",
+	"cads": "CAD data",
+	"instructions": "Instructions",
+	"dataSheets": "Data sheets",
+
+	"series": "Series"
+}

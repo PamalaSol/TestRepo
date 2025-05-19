@@ -1,0 +1,25 @@
+{
+
+    "q1":"Wie funktioniert ein HO-Matic Quetschventil?",
+    "a1":"Die hochelastische Schlauchmanschette, welche im Ventilgehäuse verankert ist, wird von der sogenannten Steuerkammer umgeben. Wenn z. B. Druckluft auf diesen Raum aufgebracht wird, verformt sich die Schlauchmanschette, welche zunächst rund ist, wird oval und bis jene flach in einer vorgegebene Position komplett schliesst. Das Quetschventil ist nun geschlossen, solange der Steuerdruck anhält.",    
+    "q2":"Wie wähle ich das richtige Manschettenmaterial für meine Branche aus?",
+    "a2":"Die Wahl der Manschette hängt vom Medium ab. Um die chemische Beständigkeit einer Manschette zu überprüfen, konsultieren Sie eine der vielen Beständigkeitslisten im Internet oder direkt bei der HO-Matic AG. Eine Notiz! Wenn mehrere Gummiwerkstoffe mit dem gewünschten Medium kompatibel sind, ist Naturkautschuk (der am häufigsten verwendete Werkstoff!) immer die erste Wahl!",    
+    "q3":"Kann ich mit einem HO-Matic Quetschventil dosieren?",
+    "a3":"Das Quetschventil kann mit einem proportionalen Druckregler (PPC) gesteuert werden. Dies ermöglicht das Dosieren von Flüssigkeiten oder Schüttgut.",    
+    "q4":"Haben Sie FDA-zertifizierte Quetschventile?",
+    "a4":"Ja, viele der HO-Matic Quetschventile können auch als 'FDA' bestellt werden. Konformitätserklärung.",    
+    "q5":"Haben Sie ATEX-zertifizierte Quetschventile?",
+    "a5":"Spezielle Versionen von HO-Matic Quetschventilen sind auch ATEX-konform und für Ex-Zonen 0, 1, 2, 20, 21 und 22 zugelassen. Sie finden auch die erforderliche Konformitätserklärung auf unserer Website (Download). Eine besondere Anmerkung: ATEX-konforme Manschetten sind immer schwarz!",    
+    "q6":"Bis zu welcher Temperatur kann ich das HO-Matic Quetschventil verwenden?",
+    "a6":"Aufgrund der Qualität des Gummis können Quetschventile nur bis zu einer maximalen Temperatur von 120°C mit spezieller EPDM-Qualität verwendet werden. Alle anderen Manschettenqualitäten können nur in Temperaturbereichen bis maximal 70-90°C verwendet werden!",    
+    "q7":"Schließt das HO-Matic Quetschventil luftdicht?",
+    "a7":"Ab ca. 2,5 bar Differenzdruck (Steuerdruck minus Betriebsdruck) schließt das HO-Matic Quetschventil luftdicht, auch bei Schüttgütern und Feststoffen. Möglich dank des Schließabstands. Die elastomere Manschette schließt über einen längeren Bereich und umschließt das transportierte Material sanft.",    
+    "q8":"Sind die HO-Matic Quetschventile für Flüssigkeiten, Feststoffe und Gase geeignet?",
+    "a8":"HO-Matic Quetschventile sind für nahezu alle Medien geeignet und werden oft als echte Problemlöser betrachtet.",    
+    "q9":"Sind HO-Matic Quetschventile frei von Toträumen?",
+    "a9":"Unsere Ventile sind weitgehend frei von Toträumen. Besonders erwähnenswert ist hier die patentierte QSV-Serie, bei der nichts anderes als der spiegelglatte Elastomer mit dem Medium in Kontakt kommt.",    
+    "q10":"Kann ich ein HO-Matic Quetschventil im Vakuum verwenden?",
+    "a10":"Die Vakuumtechnologie ist ein sehr großes Anwendungsgebiet für HO-Matic Quetschventile. Je nach Durchmesser der Ventile und des Druckbereichs (Unterdruck) muss der Steuerraum ausgeglichen werden. Wir geben Ihnen jederzeit gerne weitere Informationen.",    
+    "q11":"Wie viel Druck ist erforderlich, um die Quetschventile gasdicht zu schließen?",
+    "a11":"Der erforderliche Steuerdruck (aus dem Druckluftnetz) des Quetschventils hängt von der Gummiqualität und dem Durchmesser der Manschette ab. Normalerweise können alle Manschetten mit einem Differenzdruck von ca. 2,5 bar zu 100 % geschlossen werden. Nur die FPM-Qualität erfordert wesentlich mehr Druck!"
+}

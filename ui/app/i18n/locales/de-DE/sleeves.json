@@ -1,0 +1,38 @@
+{
+	"knowHow": "Unser Know-How",
+	"sleeveType": "Die Gummi-Manschette",
+
+	"nr1": "Naturkautschuk",
+	"nr2": "Für abrasive Medien",
+	"nbr1": "Nitrilkautschuk",
+	"nbr2": "Für Kraftstoffe, Öle, Fette",
+	"fpm1": "Fluor-Kautschuk",
+	"fpm2": "Chemikalienbeständig",
+	"cr1": "Chloroprenkautschuk",
+	"cr2": "Ozonbeständig",
+	"csm1": "Chlorosulfoniertes Polyethylen",
+	"csm2": "Für Chemikalien und oxidierende Medien",
+	"epdm1": "Ethylen-Propylen-Kautschuk",
+	"epdm2": "Für Chemikalien, Hohe Hitzebeständigkeit",
+	"heading": "Ersatzmanschetten und Zubehör",
+	"desc": "HO-Matic-Manschetten werden aus speziell entwickelten Elastomerverbindungen mit speziellen Gewebeeinlagen hergestellt, um die hohen Anforderungen an Robustheit, hohe Elastizität, Rückstellkraft und Haltbarkeit zu erfüllen. Die elastische pneumatisch betätigte Manschette blockiert den Produktfluss mit einem Differenzdruck von 2-3 bar (abhängig von der Elastomerqualität) und kehrt dank ihrer hohen Rückprallelastizität automatisch in ihre ursprüngliche offene Position zurück, wenn die Druckluft freigesetzt wird.",
+	"choose": "Wählen Sie Ihre Ventileinstellungen",
+	"oNumber": "Bestellnummer",
+
+	"add": "In den Warenkorb legen",
+	"versions": "Versionen",
+
+	"dimensions": "Abmessungen",
+	"resources": "Ressourcen",
+	"resourceHub": "Ressourcen-Hub",
+	"mManuals": "Bedienungsanleitungen",
+
+	"iGuides": "Installationshandbücher",
+	"seriesFirst": "Bitte wählen Sie zuerst die Quetschventilserie aus.",
+	"orderError": "Bitte wählen Sie alle Parameter aus der Tabelle aus, bevor Sie die Bestellung aufgeben.",
+
+	"noData": "Keine Daten gefunden",
+	"serverError": "Ein Serverfehler ist aufgetreten.",
+	"unexpectedError": "Unerwarteter Fehler aufgetreten.",
+	"addToCart": "Artikel in den Warenkorb gelegt."
+}

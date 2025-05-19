@@ -1,0 +1,21 @@
+{
+	"notice":"Mentions légales",
+	"privPol": "Protection des données",
+	
+	"hello": "Dites bonjour",
+	"pages": "Pages",
+	"home": "Accueil",
+	"products": "Produits",
+	"resources": "Ressources",
+	"news": "Nouvelles",
+	"about": "À propos de nous",
+	"contact": "Contact",
+
+	"imprint": "_Imprint",
+	"licenses": "_Licenses",
+	"terms": "_Terms",
+	"data": "_Data",
+	"cart": "Panier",
+	"clipboard": "Copie d'un e-mail dans le presse-papiers",
+	"top": "Haut de page"
+}

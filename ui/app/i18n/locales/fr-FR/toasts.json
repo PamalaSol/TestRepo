@@ -1,0 +1,13 @@
+{
+	"noData": "Aucune donnée n'a été trouvée",
+	"serverError": "Une erreur de serveur s'est produite.",
+	"unexpectedError": "Une erreur inattendue s'est produite.",
+	"addToCart": "Ajouté au panier.",
+
+	"clipboard": "Copie d'un e-mail dans le presse-papiers",
+
+	"seriesFirst": "Veuillez d'abord sélectionner la série de vannes à pincement.",
+	"orderError": "Veuillez sélectionner tous les paramètres du tableau avant de passer commande.",
+
+	"allParams": "Veuillez sélectionner tous les paramètres du tableau avant de passer commande."
+}

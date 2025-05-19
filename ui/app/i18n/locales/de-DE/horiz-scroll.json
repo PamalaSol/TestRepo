@@ -1,0 +1,90 @@
+{
+	"mainTitle": "An der Spitze der Branche in Sachen Quetschventile",
+	"mainDesc": "Hochwertige, langlebige, patentierte Lösungen, maßgeschneidert für Ihre einzigartigen Anforderungen - anwendbar in allen Branchen. Wir sind der führende Hersteller pneumatischer Quetschventile und seit 1977 für unser Engagement für Exzellenz in der Fluidsteuerung bekannt.",
+	"link": "Produkte erkunden",
+	"welcome": "Willkommen bei HO-Matic AG",
+	"welcomeDesc": "Unsere Mission ist es, unsere Partner mit Quetschventilen und Produkten von höchster Qualität auszustatten, die auch für die anspruchsvollsten Anwendungen geeignet sind. Die Hingabe von HO-Matic an Präzision, Innovation und unerschütterliche Qualität zeichnet uns aus und stellt sicher, dass Sie mit uns einen zuverlässigen Partner in Fluidkontrolllösungen wählen, der alles bewältigen kann.",
+	"welcomeLink": "Mehr Erfahren ",
+	"pv": "HO-Matic Quetschventile",
+	"pvDesc": "Entwickelt für Langlebigkeit und Effizienz sind unsere Quetschventile perfekt für die Bewältigung selbst der anspruchsvollsten Anwendungen geeignet.",
+	"controls": "Ansteuerungen",
+	"cDesc": "Verbessern Sie die Leistung Ihrer Ventile mit unserem umfassenden Sortiment an Steuerungen und Zubehör. Diese Produkte sind für eine nahtlose Integration konzipiert und bieten Ihnen die Flexibilität und Zuverlässigkeit, die für einen optimalen Ventilbetrieb erforderlich sind.",
+	"spareSleeves": "Ersatzmanschetten",
+	"ssDesc": "Erhalten Sie die Spitzenleistung Ihrer Ventile mit hochwertigen Manschetten. Für Langlebigkeit und perfekte Passform gefertigt, sind unsere Manschetten die ideale Lösung für kostengünstige Ventilwartung.",
+	"customSol": "Sonderausführungen",
+	"customSolDesc": "Entwickelt, um Ihren spezifischen Anforderungen gerecht zu werden, bieten unsere maßgeschneiderten Lösungen innovative und individuelle Ventilkonfigurationen. Lassen Sie unsere Expertise in der Anpassung Ihre einzigartigen Ventilanforderungen zum Leben erwecken und sorgen Sie für eine beispiellose Leistung.",
+	"sideText": "Quetschventile neu definiert",
+
+	"p1heading": "Serie 20 - Quadratische Form mit kurzer Installationslänge",
+	"p1description": "Der POM40 entstand aus dem Wunsch des Kunden nach einem rechteckigen Gehäuse mit kurzer Installationslänge. Heute ist er ein millionenfach verkauftes Schlauchquetschventil in der Pulverbeschichtungs- und Lackindustrie.",
+
+	"p2heading": "QSV65, Serie 40 - Unser patentiertes Problemlösungsventil",
+	"p2description": "Das QSV-Schlauchquetschventil zeichnet sich durch abrasive Medien und empfindliche Produkte aus. Seine patentierte Manschette mit integriertem Bajonettverschluss ermöglicht einen schnellen und unkomplizierten Manschettenwechsel - eine einzigartige Funktion auf dem Markt!",
+
+	"p3heading": "DN20, Serie 10 - Seit Jahrzehnten in rauen Umgebungen bewährt",
+	"p3description": "Robust, unzerstörbar und kostengünstig hat sich DN20 über Jahrzehnte bewährt und bleibt ein Bestseller. Häufig in Fahrzeug- und Apparatebau sowie Schienentransportsystemen anzutreffen.",
+
+	"partners": "Unsere geschätzten Partner",
+	"partnersD": "Im Mittelpunkt unserer Innovation und unseres Erfolgs stehen unsere Partnerschaften. Wir arbeiten eng mit führenden Branchenexperten zusammen, um Ihnen modernste Lösungen zu bieten. Diese Zusammenarbeit ermöglicht es uns, unser Know-how zu erweitern, unser Produktangebot zu verbessern und unseren Kunden einen überlegenen Wert zu bieten. Gemeinsam gestalten wir die Zukunft der Ventiltechnologie!",
+
+	"p1Title": "Buschjost Magnetventile",
+	"p1Heading": "Magnetventile",
+	"p1Desc": "Die Buschjost Prozessventil Palette umfasst eine Vielzahl von verschiedenen Magnetventilen und pneumatischen Ventilen zur Steuerung und Regelung gasförmiger und flüssiger Medien in druckführenden Rohrleitungen.",
+
+	"p2Title": "Ross Europa GmbH",
+	"p2Heading": "Pneumatikventile",
+	"p2Desc": "Premium-Pneumatik ohne Grenzen - seit 1960. Ihr Berater und Lieferant von Magnetventilen und Problemlösern für die Steuerung und Abschaltung von medienführenden Rohrleitungen.",
+
+	"hello": "Hallo",
+	"pages": "Seiten",
+	"home": "Startseite",
+	"products": "Produkte",
+	"resources": "Ressourcen",
+	"news": "Neuigkeiten",
+	"about": "Über uns",
+	"contact": "Kontakt",
+
+	"imprint": "Impressum",
+	"licenses": "_Licenses",
+	"terms": "Geschäftsbedingungen",
+	"data": "_Data",
+	"cart": "Warenkorb",
+
+	"noProducts": "Keine Produkte gefunden",
+	"series": "Serie",
+
+	"pinchValvesMn": "Quetschventile",
+	"customSolutionsMn": "Sonderausführungen",
+	"sleevesMn": "Ersatzmanschetten",
+	"controlsMn": "Ansteuerungen",
+	"commercialProductsMn": "Handelsprodukte",
+
+	"noData": "Keine Daten gefunden",
+	"serverError": "Ein Serverfehler ist aufgetreten.",
+	"unexpectedError": "Unerwarteter Fehler aufgetreten.",
+
+	"search": "Suche",
+	"sent": "Nachricht gesendet!",
+    "notSend": "Nachricht konnte nicht gesendet werden.",
+	"touch": "Kontaktieren Sie uns",
+	"metaDesc": "Unsere hochwertigen, patentierten pneumatischen Quetschventile sind für verschiedene Branchen konzipiert und gewährleisten Langlebigkeit und Präzision. Entdecken Sie Schweizer Exzellenz mit HO-Matic.",
+
+	"sleeveSearchText": "NR (FDA, ATEX) Naturkautschuk Für abrasive Medien NBR (FDA, ATEX) Fluorkautschuk Chemikalienbeständig CSM Chlorosulfoniertes Polyethylen Für Chemikalien und oxidierende Medien FPM Naturkautschuk Für Kraftstoffe, Öle, Fette CR Chloroprenkautschuk Ozonbeständig EPDM Ethylen-Propylen-Kautschuk Für Chemikalien, Hohe Hitzebeständigkeit Ersatzmanschetten und Zubehör HO-Matic-Manschetten werden aus speziell entwickelten Elastomerverbindungen mit speziellen Gewebeeinlagen hergestellt, um die hohen Anforderungen an Robustheit, hohe Elastizität, Rückstellkraft und Haltbarkeit zu erfüllen. Die elastische pneumatisch betätigte Manschette blockiert den Produktfluss mit einem Differenzdruck von 2-3 bar (abhängig von der Elastomerqualität) und kehrt dank ihrer hohen Rückprallelastizität automatisch in ihre ursprüngliche offene Position zurück, wenn die Druckluft freigesetzt wird.",
+	
+	"brochure": "Broschüre",
+    "parts": "Ersatzteile",
+    "manufacturer": "Hersteller- / Konformitätserklärung",
+    "videos": "Videos: Funktionalität und Ersatz der Manschetten",
+    "cads":"CAD Daten",
+    "instructions":"Anleitungen",
+    "dataSheets":"Datenblatt",
+    "clipboard" :"Kopiert E-Mail in die Zwischenablage",
+
+	"SM":"Soziale medien",
+	
+	"notice":"Impressum",
+	"privPol": "Datenschutzerklärung",
+	"policyTitle":"Datenschutz",
+	"policyText":"Ich stimme zu, dass meine Angaben aus dem Kontaktformular zur Beantwortung meiner Anfrage erhoben und verarbeitet werden. Ihre Anfrage wird verschlüsselt per HTTPS an unseren Server geschickt. Sie können Ihre Einwilligung jederzeit per E-Mail an info@ho-matic.ch widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung."
+
+}

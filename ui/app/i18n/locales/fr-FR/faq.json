@@ -1,0 +1,35 @@
+{
+
+    "q1": "Comment fonctionne une vanne à manchon HO-Matic ?",
+    "a1": "Le manchon de tuyau très élastique ancré dans le boîtier de la vanne est entouré par ce que l'on appelle la chambre de contrôle. Si de l'air comprimé est appliqué dans cet espace, le manchon de tuyau, qui est initialement rond, se déforme, devient ovale et se replie à plat dans une position prédéterminée. La vanne à manchon est alors fermée tant que la pression de commande se maintient.",
+
+    "q2": "Comment choisir la bonne qualité de manchon pour mon application?",
+    "a2": "Le choix du manchon dépend du produit. Pour vérifier la résistance chimique d'un manchon, consultez l'une des nombreuses listes de résistance sur Internet ou directement chez HO-Matic AG. Si plusieurs matériaux de caoutchouc sont compatibles avec le produit souhaité, le caoutchouc naturel (le matériau le plus couramment utilisé !) est toujours le premier choix !",
+
+    "q3": "Puis-je doser avec une vanne à manchon HO-Matic ?",
+    "a3": "La vanne à manchon peut être commandée à l'aide d'un régulateur de pression proportionnel (PPC). Cela permet de doser des flux ou des produits en vrac.",
+
+    "q4": "Avez-vous des vannes à manchon certifiées FDA ?",
+    "a4": "Oui, de nombreuses vannes à manchon HO-Matic peuvent également être commandées en version « FDA ». Déclaration de conformité.",
+
+    "q5": "Avez-vous des vannes à manchon certifiées ATEX ?",
+    "a5": "Les versions spéciales des vannes à manchon HO-Matic sont également conformes à la norme ATEX et homologuées pour les zones Ex 0, 1, 2, 20, 21 et 22. Vous trouverez également la déclaration de conformité nécessaire sur notre site Internet (téléchargement). Remarque : les manchons conformes à la norme ATEX sont toujours noirs !",
+
+    "q6": "Jusqu'à quelle température puis-je utiliser la vanne à manchon HO-Matic ?",
+    "a6": "En raison de la qualité du caoutchouc, les vannes à manchon ne peuvent être utilisées que jusqu'à une température maximale de 120° C avec la qualité spéciale EPDM. Toutes les autres qualités de manchons ne peuvent être utilisées que dans des plages de température allant jusqu'à 70-90° C au maximum !",
+
+    "q7": "La vanne à manchon HO-Matic ferme-t-elle de manière étanche à l'air ?",
+    "a7": "A partir d'une pression différentielle d'environ 2,5 bars (pression de commande moins pression de service), la vanne à manchon HO-Matic ferme de manière étanche à l'air, même pour les produits en vrac et les matières solides. Cela est possible grâce à la distance de fermeture. Le manchon en élastomère se ferme sur une plus grande surface et entoure délicatement le produit transporté.",
+
+    "q8": "Les vannes à manchon HO-Matic conviennent-elles aux liquides, aux solides et aux gaz ?",
+    "a8": "Les vannes à manchon HO-Matic conviennent à presque tous les fluides et sont souvent considérées comme de véritables solutions aux problèmes.",
+
+    "q9": "Les vannes à manchon HO-Matic sont-elles exemptes d'espace mort ?",
+    "a9": "Nos vannes sont largement exemptes d'espace mort. La série brevetée QSV est particulièrement remarquable à cet égard, car rien d'autre que l'élastomère lisse comme un miroir n'entre en contact avec le fluide.",
+
+    "q10": "Puis-je utiliser une vanne à manchon HO-Matic dans le vide ?",
+    "a10": "La technique du vide est un domaine d'application très vaste pour les vannes à manchon HO-Matic. En fonction du diamètre des vannes et de la plage de pression (pression négative), la salle de commande doit être compensée. Nous nous tenons à votre disposition pour tout complément d'information.",
+
+    "q11": "Quelle est la pression nécessaire pour assurer l'étanchéité des vannes à manchon ?",
+    "a11": "La pression de commande nécessaire (à partir du réseau d'air comprimé) de la vanne à manchon dépend de la qualité du caoutchouc et du diamètre du manchon. Normalement, tous les manchons peuvent être fermés à 100 % avec une pression différentielle d'environ 2,5 bars. Seule la qualité FPM nécessite une pression plus élevée !"
+}

@@ -1,0 +1,18 @@
+{
+	"notice":"Impressum",
+	"privPol": "Datenschutzerklärung",
+
+	"home": "Startseite",
+    "products": "Produkte",
+    "resources": "Ressourcen",
+    "news": "Neuigkeiten",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "imprint": "Impressum",
+    "licenses":"_Licenses",
+   "terms": "Geschäftsbedingungen",
+    "data":"_Data",
+	"cart": "Warenkorb",
+    "clipboard" :"Kopiert E-Mail in die Zwischenablage",
+    "top": "nach oben"
+}

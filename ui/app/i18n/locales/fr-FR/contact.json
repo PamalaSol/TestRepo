@@ -1,0 +1,48 @@
+{
+	"touch": "Contactez-nous",
+	"msg": "Vos questions et vos commentaires sont importants pour nous. Que vous ayez besoin de plus d'informations sur nos produits, que vous souhaitiez discuter de solutions personnalisées ou que vous ayez d'autres demandes, nous sommes là pour vous aider. N'hésitez pas à prendre contact avec nous.",
+
+	"name": "Nom",
+	"nameL": "Votre nom",
+	"subject": "Sujet",
+	"subjectL": "Écrire le sujet",
+	"company": "Entreprise",
+	"companyL": "Votre entreprise",
+	"email": "E-mail",
+	"emailL": "Adresse e-mail",
+
+	"messageL": "Commencez à taper ici",
+	"submit": "Soumettre",
+
+	"find": "Trouvez-nous",
+	"salesPartners": "Partenaires de distribution",
+	"denmark": "Danemark",
+	"japan": "Japon",
+	"norway": "Norvège",
+	"thailand": "Thaïlande",
+	"sweden": "Suède",
+	"china": "Chine",
+	"netherlands": "Pays-Bas",
+	"sent": "Message envoyé!",
+	"notSend": "Échec de l'envoi du message.",
+	"verifyHuman": "Veuillez vérifier que vous êtes un humain.",
+
+	"products": "Produits",
+	"resources": "Ressources",
+	"news": "Actualités",
+	"about": "À propos",
+	"contact": "Contact",
+
+	"message": "Message",
+	"hello": "Dites bonjour",
+	"pages": "Pages",
+	"home": "Accueil",
+	"infoMissingMsg": "Veuillez remplir vos informations.",
+
+	"SM": "Réseaux sociaux",
+
+	"notice": "Mentions légales",
+	"privPol": "Protection des données",
+	"policyTitle": "Protection des données",
+	"policyText": "J'accepte que mes données du formulaire de contact soient collectées et traitées pour répondre à ma demande. Votre demande est envoyée à notre serveur cryptée via HTTPS. Les données seront effacées après le traitement de votre demande. Vous pouvez révoquer votre consentement en tout temps moyennant un courrier électronique à info@ho-matic.ch. Vous trouverez des informations détaillées sur le traitement des données des utilisateurs dans notre déclaration de protection des données."
+}

@@ -1,0 +1,79 @@
+.cat1 {
+	@apply max-laptop:font-light max-laptop:leading-5 laptop:text-base laptop-l:text-base laptop-xl:text-lg laptop-xl-extra:text-xl text-xl font-medium;
+}
+
+.policyTitles {
+	@apply laptop:text-lg laptop-l:text-lg laptop-xl:text-xl laptop-xl-extra:text-2xl mb-2 text-xl font-medium;
+}
+
+.policyPageTitle {
+	@apply laptop:text-xl laptop-l:text-xl laptop-xl:text-2xl laptop-xl-extra:text-3xl text-2xl font-bold;
+}
+
+.cat2 {
+	@apply laptop:text-sm laptop-l:text-sm laptop-xl:text-lg laptop-xl-extra:text-xl text-xs font-normal;
+}
+
+.cat3 {
+	@apply laptop:text-xs laptop-l:text-xs laptop-xl:text-sm laptop-xl-extra:text-base text-[0.65rem] font-extralight;
+}
+
+.policyCart {
+	@apply laptop:text-xs laptop-l:text-xs  laptop-xl:text-sm laptop-xl-extra:text-base text-[0.65rem] font-extralight;
+}
+
+.cat4 {
+	@apply laptop:text-sm laptop-l:text-sm laptop-xl:text-base laptop-xl-extra:text-lg font-normal;
+}
+
+.industries {
+	@apply laptop:text-sm laptop-l:text-sm laptop-xl:text-base laptop-xl-extra:text-lg font-normal;
+}
+
+.cat5 {
+	@apply laptop:text-xs laptop-l:text-xs laptop-xl:text-base laptop-xl-extra:text-lg font-light;
+}
+
+.productTitle {
+	@apply laptop:text-base laptop-l:text-lg laptop-xl:text-2xl font-medium;
+}
+
+.postTitle {
+	@apply mobile-s:text-lg mobile-m:text-lg tablet:text-lg laptop:text-base laptop-l:text-lg laptop-xl:text-2xl text-[0.6rem] font-medium;
+}
+
+.postTitleDetails {
+	@apply mobile-s:text-2xl mobile-m:text-2xl tablet:text-2xl laptop:text-xl laptop-l:text-xl laptop-xl:text-2xl text-[0.6rem] font-bold;
+}
+
+.productTitle2 {
+	@apply laptop:text-base laptop-l:text-lg laptop-xl:text-2xl font-medium;
+}
+
+.productDesc {
+	@apply mobile-m:text-[0.6rem] mobile-l:text-[0.7] laptop:text-xs laptop-l:text-xs laptop-xl:text-sm laptop-xl-extra:text-base text-[0.55rem] font-normal;
+}
+
+.productDescExtra {
+	@apply mobile-m:text-xs laptop:text-xs laptop-l:text-xs laptop-xl:text-sm laptop-xl-extra:text-base text-[0.6rem] font-light;
+}
+
+.series {
+	@apply laptop:text-xl laptop-l:text-2xl laptop-xl:text-3xl laptop-xl-extra:text-4xl font-bold;
+}
+
+.partnerA {
+	@apply laptop:text-[0.5rem] laptop-l:text-[0.6rem] laptop-xl:text-xs font-light;
+}
+
+.pvDetailHeading {
+	@apply laptop:text-[0.5rem] laptop-l:text-[0.7rem] laptop-xl:text-xs laptop-xl-extra:text-sm font-light;
+}
+
+.pvDetailDesc {
+	@apply laptop:ml-3  laptop:text-[0.5rem] laptop-l:text-[0.7rem] laptop-xl:text-xs laptop-xl-extra:text-sm font-medium;
+}
+
+.homeFooter {
+	@apply laptop:text-[0.6rem] laptop-l:text-xs laptop-xl+:text-sm 4k:text-lg;
+}

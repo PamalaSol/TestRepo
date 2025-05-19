@@ -1,0 +1,61 @@
+{
+	"title": "Quetschventil-Lösungen",
+	"description": "Unsere innovativen Produkte zeichnen sich durch Präzision und Qualität aus und können alle Ihre spezifischen Anforderungen erfüllen.",
+
+	"s2Title": "Maßgeschneiderte Kundenlösungen",
+	"s2Desc": "Um den hohen Anforderungen der Kunden gerecht zu werden, sind manchmal Sonderkonstruktionen und maßgeschneiderte Lösungen erforderlich. In enger Zusammenarbeit mit dem Kunden entwickelt HO-Matic individuelle Quetschventil-Lösungen. Inzwischen gibt es verschiedene kundenspezifische Versionen, die sich von Standardkonfigurationen durch Anschlüsse, Materialauswahl oder Funktionalität unterscheiden. Eine WIN-WIN-Situation.",
+	"line1": "Bereit, loszulegen?",
+	"line2": "Wir sind für Sie da.",
+	"contact": "Kontaktieren Sie uns",
+	"noData": "Keine Daten gefunden",
+	"serverError": "Ein Serverfehler ist aufgetreten",
+	"unexpectedError": "Unerwarteter Fehler aufgetreten",
+	"addToCart": "Artikel in den Warenkorb gelegt",
+
+	"add": "In den Warenkorb legen",
+	"customSol": "Maßgeschneiderte Lösungen",
+	"customSolDesc": "Entwickelt, um Ihren spezifischen Anforderungen gerecht zu werden, bieten unsere maßgeschneiderten Lösungen innovative und individuelle Ventilkonfigurationen. ",
+
+	"suitable": "Am besten geeignet für:",
+
+	"Threaded connection": "Gewindeanschluss",
+
+	"Tri-Clamp": "Tri-Clamp Anschluss",
+	"Flange": "Flansch",
+	"Threaded Cover": "Gewindedeckel",
+	"O-Ring": "O-Ring",
+	"Screw Connection": "Gewindeanschluss",
+	"Clamping Cone": "Spannkonus",
+	"Clamping Ring": "Spannring",
+	"Threaded Ring": "Gewindering",
+	"Threaded Cap": "Gewindekappe",
+
+	"Dairy pipe fitting": "Milchrohrverbindung",
+
+	"POM white / POM-ELS": "Kunststoff POM",
+	"Aluminium": "Aluminium-Legierung",
+	"Cast aluminum": "Aluminiumguss",
+	"Stainless steel": "Edelstahl",
+	"Alu6026": "Aluminium 6026",
+
+	"size": "Größe",
+	"selectSize": "Größe",
+	"Connection": "Verbindung",
+	"selConnection": "Verbindung",
+	"housingMat": "Gehäusematerial",
+	"selhousingMat": "Gehäusematerial",
+	"quality": "Manschettenqualität",
+	"selQuality": "Manschettenqualität",
+	"search": "Suche - geben Sie hier ein, wonach Sie suchen",
+	"notFound": "Produktkategorie nicht gefunden!",
+
+	"series": "Serien",
+	"sQuality": "Manschettenqualität",
+	"version": "Version",
+	"standard": "Standard",
+	"atexVer": "ATEX-Version",
+
+	"cads": "CAD Daten",
+	"parts": "Ersatzteile",
+	"servInst": "Serviceanleitung"
+}

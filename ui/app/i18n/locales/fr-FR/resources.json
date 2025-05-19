@@ -1,0 +1,17 @@
+{
+	"title": "Bienvenue dans le centre de ressources de HO-Matic!",
+	"desc": "Ici, vous trouverez toutes les ressources précieuses pour améliorer votre expérience avec nos produits. Des brochures complètes qui approfondissent nos offres innovantes aux instructions claires, étape par étape, pour un fonctionnement sans faille, nos ressources sont conçues pour vous donner les connaissances et les outils dont vous avez besoin pour des performances optimales. Explorez notre section de téléchargements et libérez tout le potentiel des solutions de classe mondiale de HO-Matic.",
+
+	"brochure": "Brochure",
+	"parts": "Pièces détachées",
+	"manufacturer": "Déclaration du fabricant / déclaration de conformité",
+	"videos": "Vidéos : fonctionnalité et remplacement des manchons",
+
+	"noData": "Aucune donnée n'a été trouvée",
+	"unexpectedError": "Une erreur inattendue s'est produite.",
+    "cads":"Données CAD",
+    "instructions":"Instructions",
+    "dataSheets":"Fiche produit",
+
+	"series": "Série"
+}

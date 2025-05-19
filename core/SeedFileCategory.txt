@@ -1,0 +1,332 @@
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Bilder'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Images'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'Images');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+      (gen_random_uuid(), description_localization_set_guid, 1, 'Bilder'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Images'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'Images');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."FileCategory"("Id", "NameId", "DescriptionId","IsActive","CreatedBy","CreatedDate")
+    VALUES (1, name_localization_set_guid, description_localization_set_guid,true,null,'2013-11-03 00:00:00-07');
+
+END $$;
+
+
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Videos'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Videos'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'Vidéos');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+      (gen_random_uuid(), description_localization_set_guid, 1, 'Videos'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Videos'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'Vidéos');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."FileCategory"("Id", "NameId", "DescriptionId","IsActive","CreatedBy","CreatedDate")
+    VALUES (2, name_localization_set_guid, description_localization_set_guid,true,null,'2013-11-03 00:00:00-07');
+
+END $$;
+
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Andere'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Other'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'Autre');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+      (gen_random_uuid(), description_localization_set_guid, 1, 'Andere'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Other'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'Autre');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."FileCategory"("Id", "NameId", "DescriptionId","IsActive","CreatedBy","CreatedDate")
+    VALUES (3, name_localization_set_guid, description_localization_set_guid,true,null,'2013-11-03 00:00:00-07');
+
+END $$;
+
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Deklaration'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Declarations'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'Déclarations');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+      (gen_random_uuid(), description_localization_set_guid, 1, 'Deklaration'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Declarations'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'Déclarations');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."FileCategory"("Id", "NameId", "DescriptionId","IsActive","CreatedBy","CreatedDate")
+    VALUES (4, name_localization_set_guid, description_localization_set_guid,true,null,'2013-11-03 00:00:00-07');
+
+END $$;
+
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Maße'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Dimensions'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'Dimensions');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+      (gen_random_uuid(), description_localization_set_guid, 1, 'Maße'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Dimensions'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'Dimensions');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."FileCategory"("Id", "NameId", "DescriptionId","IsActive","CreatedBy","CreatedDate")
+    VALUES (5, name_localization_set_guid, description_localization_set_guid,true,null,'2013-11-03 00:00:00-07');
+
+END $$;
+
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Anweisungen'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Instructions'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'Instructions');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+      (gen_random_uuid(), description_localization_set_guid, 1, 'Anweisungen'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Instructions'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'Instructions');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."FileCategory"("Id", "NameId", "DescriptionId","IsActive","CreatedBy","CreatedDate")
+    VALUES (6, name_localization_set_guid, description_localization_set_guid,true,null,'2013-11-03 00:00:00-07');
+
+END $$;
+
+
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Installationsanleitungen'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Installation guides'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'Guides d installation');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+      (gen_random_uuid(), description_localization_set_guid, 1, 'Installationsanleitungen'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Installation guides'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'Guides d installation');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."FileCategory"("Id", "NameId", "DescriptionId","IsActive","CreatedBy","CreatedDate")
+    VALUES (7, name_localization_set_guid, description_localization_set_guid,true,null,'2013-11-03 00:00:00-07');
+
+END $$;
+
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Technische Spezifikationen'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Technical specifications'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'Spécifications techniques');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+      (gen_random_uuid(), description_localization_set_guid, 1, 'Technische Spezifikationen '),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Technical specifications'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'Spécifications techniques');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."FileCategory"("Id", "NameId", "DescriptionId","IsActive","CreatedBy","CreatedDate")
+    VALUES (8, name_localization_set_guid, description_localization_set_guid,true,null,'2013-11-03 00:00:00-07');
+
+END $$;
+
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Ersatzteile'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Spare Parts'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'Pièces de rechange');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+      (gen_random_uuid(), description_localization_set_guid, 1, 'Ersatzteile'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Spare Parts'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'Pièces de rechange');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."FileCategory"("Id", "NameId", "DescriptionId","IsActive","CreatedBy","CreatedDate")
+    VALUES (9, name_localization_set_guid, description_localization_set_guid,true,null,'2013-11-03 00:00:00-07');
+
+END $$;
+
+
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Vorschaubild'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Thumbnail Image'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'Miniature');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+      (gen_random_uuid(), description_localization_set_guid, 1, 'Vorschaubild'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Thumbnail Image'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'Miniature');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."FileCategory"("Id", "NameId", "DescriptionId","IsActive","CreatedBy","CreatedDate")
+    VALUES (10, name_localization_set_guid, description_localization_set_guid,true,null,'2013-11-03 00:00:00-07');
+
+END $$;

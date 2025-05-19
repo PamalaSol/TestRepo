@@ -1,0 +1,14 @@
+{
+
+    "noData": "Keine Daten gefunden",
+    "serverError": "Ein Serverfehler ist aufgetreten.",
+    "unexpectedError": "Unerwarteter Fehler aufgetreten.",
+    "addToCart": "Artikel in den Warenkorb gelegt.",
+    
+    "clipboard": "Kopiert in die Zwischenablage",
+    
+    "seriesFirst":"Please select the pinch valve series first.",
+    "orderError": "Bitte wählen Sie alle Parameter in der Tabelle aus, bevor Sie die Bestellung aufgeben.",
+    
+    "allParams":"Bitte wählen Sie alle Parameter in der Tabelle aus, bevor Sie die Bestellung aufgeben."
+}

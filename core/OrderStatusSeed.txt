@@ -1,0 +1,133 @@
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Ausstehend'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Pending'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'En attendant');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+      (gen_random_uuid(), description_localization_set_guid, 1, 'Ausstehend'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Pending'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'En attendant');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."OrderStatus"("Id", "NameId", "DescriptionId")
+    VALUES (1, name_localization_set_guid, description_localization_set_guid);
+
+END $$;
+
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Verarbeitung'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Processing'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'En traitement');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+      (gen_random_uuid(), description_localization_set_guid, 1, 'Verarbeitung'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Processing'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'En traitement');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."OrderStatus"("Id", "NameId", "DescriptionId")
+    VALUES (2, name_localization_set_guid, description_localization_set_guid);
+
+END $$;
+
+
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Abgesagt'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Canceled'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'Annulé');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+      (gen_random_uuid(), description_localization_set_guid, 1, 'Abgesagt'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Canceled'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'Annulé');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."OrderStatus"("Id", "NameId", "DescriptionId")
+    VALUES (3, name_localization_set_guid, description_localization_set_guid);
+
+END $$;
+
+
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Vollendet'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Completed'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'Complété');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+      (gen_random_uuid(), description_localization_set_guid, 1, 'Vollendet'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Completed'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'Complété');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."OrderStatus"("Id", "NameId", "DescriptionId")
+    VALUES (4,name_localization_set_guid, description_localization_set_guid);
+
+END $$;

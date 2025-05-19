@@ -1,0 +1,122 @@
+
+INSERT INTO public."Language"(
+	"Id", "Name", "Culture")
+	VALUES (1, 'German',' de-DE');
+INSERT INTO public."Language"(
+	"Id", "Name", "Culture")
+	VALUES (2, 'English',' en-EN');
+INSERT INTO public."Language"(
+	"Id", "Name", "Culture")
+	VALUES (3, 'French',' fr-FR');
+
+	INSERT INTO public."Roles"(
+	"Id", "Name", "NormalizedName", "ConcurrencyStamp")
+	VALUES ('094dd5c7-cc0c-4fbc-8ad9-23769148e5ae',	'User',	'USER',	'33dfa7f5-1033-4b45-a74e-2a00655308f3');
+INSERT INTO public."Roles"(
+	"Id", "Name", "NormalizedName", "ConcurrencyStamp")
+	VALUES ('51f4cb1d-32a8-4d07-9e8e-a382fdfb4159',	'Admin',	'ADMIN',	'10bd5943-d22c-45b5-9313-462649948ad5');
+INSERT INTO public."Roles"(
+	"Id", "Name", "NormalizedName", "ConcurrencyStamp")
+	VALUES ('c0273ba7-7982-4f77-9893-85fcedbcb70d',	'Superadmin',	'SUPERADMIN',	'80bde1d2-a01e-4c85-9352-350fd1165f26');
+
+-- 
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Ausstehend'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Pending'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'En attente');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), description_localization_set_guid, 1, 'Ausstehend'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Pending'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'En attente');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."OrderStatus"("Id", "NameId", "DescriptionId")
+    VALUES (1, name_localization_set_guid, description_localization_set_guid);
+
+END $$;
+
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Wird bearbeitet'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Processing'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'Traitement');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), description_localization_set_guid, 1, 'Wird bearbeitet'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Processing'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'Traitement');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."OrderStatus"("Id", "NameId", "DescriptionId")
+    VALUES (2, name_localization_set_guid, description_localization_set_guid);
+
+END $$;
+
+
+	
+DO $$
+DECLARE 
+   name_localization_set_guid UUID;
+    description_localization_set_guid UUID;
+BEGIN
+    -- Insert into LocalizationSet table for name and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO name_localization_set_guid;
+
+    -- Insert into LocalizationSet table for description and obtain the generated GUID
+    INSERT INTO public."LocalizationSet"("Id")
+    VALUES (gen_random_uuid())
+    RETURNING "Id" INTO description_localization_set_guid;
+
+    -- Insert into Localization table for each language, using the same LocalizationSetId
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), name_localization_set_guid, 1, 'Abgeschlossen'),
+        (gen_random_uuid(), name_localization_set_guid, 2, 'Completed'),
+        (gen_random_uuid(), name_localization_set_guid, 3, 'Complété');
+
+    INSERT INTO public."Localization"("Id", "LocalizationSetId", "LanguageId", "Value")
+    VALUES 
+        (gen_random_uuid(), description_localization_set_guid, 1, 'Abgeschlossen'),
+        (gen_random_uuid(), description_localization_set_guid, 2, 'Completed'),
+        (gen_random_uuid(), description_localization_set_guid, 3, 'Complété');
+    -- Insert into OrderStatus table, referencing the NameId and DescriptionId from the same LocalizationSetId
+    INSERT INTO public."OrderStatus"("Id", "NameId", "DescriptionId")
+    VALUES (3, name_localization_set_guid, description_localization_set_guid);
+
+END $$;

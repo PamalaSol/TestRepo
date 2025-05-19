@@ -1,0 +1,56 @@
+{
+	"touch": "Kontaktieren Sie uns",
+	"msg": "Ihre Fragen und Feedback sind uns wichtig. Ob Sie weitere Informationen zu unseren Produkten benötigen, individuelle Lösungen besprechen möchten oder sonstige Anfragen haben, wir sind hier, um Ihnen zu helfen. Nehmen Sie Kontakt mit uns auf.",
+	"name": "Name",
+	"nameL": "Ihr Name",
+	"subject": "Betreff",
+    "subjectL": "Betreff schreiben",
+	"company": "Firma",
+	"companyL": "Ihre Firma",
+	"email": "E-Mail",
+    "emailL": "E-Mail-Adresse",
+    "message": "Nachricht",
+    "messageL": "Hier eingeben",
+	"submit": "Senden",
+
+    "find": "Finden Sie uns",
+	"salesPartners": "Vertriebspartner",
+	"denmark": "Dänemark",
+	"japan": "Japan",
+	"norway": "Norwegen",
+	"thailand": "Thailand",
+	"sweden": "Schweden",
+	"china": "China",
+	"netherlands": "Niederlande",
+	"sent": "Nachricht gesendet!",
+    "notSend": "Nachricht konnte nicht gesendet werden.",
+	"verifyHuman":"Bitte bestätigen Sie, dass Sie ein Mensch sind.",
+
+
+	"hello": "Hallo",
+	"pages": "Seiten",
+	"home": "Startseite",
+	"products": "Produkte",
+	"resources": "Ressourcen",
+	"news": "Neuigkeiten",
+	"about": "Über uns",
+	"contact": "Kontakt",
+	"imprint": "Impressum",
+
+	"terms": "Geschäftsbedingungen",
+	"data":"_Data",
+	"cart": "Warenkorb",
+	"noProducts": "Keine Produkte gefunden",
+	"series": "Serie",
+
+	"licenses":"_Licenses",
+	"infoMissingMsg": "Bitte füllen Sie Ihre Informationen aus.",
+
+	"SM":"Soziale medien",
+
+	"notice":"Impressum",
+	"privPol": "Datenschutzerklärung",
+	"policyTitle":"Datenschutz",
+	"policyText":"Ich stimme zu, dass meine Angaben aus dem Kontaktformular zur Beantwortung meiner Anfrage erhoben und verarbeitet werden. Ihre Anfrage wird verschlüsselt per HTTPS an unseren Server geschickt. Sie können Ihre Einwilligung jederzeit per E-Mail an info@ho-matic.ch widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer Datenschutzerklärung."
+
+}

@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<RootNamespace>CleanArchFramework.Application</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<NoWarn>CS1591;CS8618;CS8603</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Models\Common\**" />
+		<EmbeddedResource Remove="Models\Common\**" />
+		<None Remove="Models\Common\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Contracts\Infrastructure\Cryptography\" />
+		<Folder Include="Contracts\Infrastructure\Captcha\" />
+		<Folder Include="Features\Authentication\Query\" />
+		<Folder Include="Models\Shared\Validation\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\.editorconfig" Link=".editorconfig" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BouncyCastle.Cryptography" Version="2.2.1" />
+		<PackageReference Include="FluentValidation" Version="11.8.1" />
+		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.8.1" />
+		<PackageReference Include="Mapster" Version="7.4.0" />
+		<PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
+		<PackageReference Include="MediatR" Version="12.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.1" />
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\CleanArchFramework.Domain\CleanArchFramework.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

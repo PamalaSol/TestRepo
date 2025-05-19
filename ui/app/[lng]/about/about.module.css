@@ -1,0 +1,3 @@
+.years{
+    @apply laptop:text-base laptop-l:text-base laptop-xl:text-lg laptop-xl-extra:text-xl font-medium text-[#111111] 
+}
