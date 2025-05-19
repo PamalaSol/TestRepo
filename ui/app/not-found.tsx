@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { useTranslation } from './i18n/client';
 import { UseTranslation as ServerUseTranslation } from './i18n';
-import { fallbackLng, languages, baseUrl } from './i18n/settings';
+import { fallbackLng } from './i18n/settings';
+import { baseUrl } from '@/lib/consts';
 
 export async function generateMetadata({ params }: { params: { lng?: string } }) {
 	const currentLng = params?.lng || fallbackLng;
@@ -24,12 +25,12 @@ export default function NotFound({ lng: lngFromProps }: { lng?: string }) {
 	const currentLng = lngFromProps || fallbackLng;
 	const { t } = useTranslation(currentLng, 'notfound');
 	return (
-		<div className="flex min-h-screen flex-col items-center justify-center p-4 text-center">
+		<div className="flex flex-col items-center justify-center min-h-screen p-4 text-center">
 			<h1 className="mb-6 text-3xl font-semibold">{t('title')}</h1>
 			<p className="mb-8 text-gray-600">{t('desc')}</p>
 			<Link
 				href="/"
-				className="rounded-md bg-blue-600 px-6 py-2 text-white transition-colors hover:bg-blue-700"
+				className="px-6 py-2 text-white transition-colors bg-blue-600 rounded-md hover:bg-blue-700"
 			>
 				{t('returnHome')}
 			</Link>
