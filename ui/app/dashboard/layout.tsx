@@ -2,23 +2,15 @@
 import Sidebar from '@/app/dashboard/_components/Sidebar';
 import { ToastContainer } from 'react-toastify';
 import './globals.css';
-import { Metadata } from 'next';
 
 import LangProvider from './_context/LangContext';
 import Header from './_components/Header';
 import { usePathname } from 'next/navigation';
 
-export const metadata: Metadata = {
-	robots: {
-		index: false,
-		follow: false,
-	},
-};
-
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
 	const pathname = usePathname();
 
-	const defaultLayout = <div>{children}</div>;
+	const defaultLayout = (<div>{children}</div>);
 	const dashboardLayout = (
 		<div className="grid h-screen grid-cols-12">
 			<div className="w-full h-full col-span-2">
@@ -35,7 +27,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 		<div>
 			<LangProvider>
 				<title>Ho-Matic Dashboard</title>
-				{pathname === '/dashboard/login' ? defaultLayout : dashboardLayout}
+				{pathname === '/dashboard/login' ? (
+					defaultLayout
+				) : (
+					dashboardLayout
+				)}
 			</LangProvider>
 			<ToastContainer />
 		</div>
