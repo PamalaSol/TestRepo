@@ -1,18 +1,34 @@
 'use client';
 
 import Image from 'next/image';
-import ContactForm from '../_components/ContactForm';
 import BlueArrow from '@/public/assets/blue-arrow.svg';
 import { useState } from 'react';
-import ContactFooter from '../_components/ContactFooter';
-import tStyles from '@/app/[lng]/textSizes.module.css';
 import { useTranslation } from '@/app/i18n/client';
-import HoAccordionPartners from '../_components/HoAccordionPartners';
 import ContactValve from '@/public/assets/contact-valve-open.webp';
 import Link from 'next/link';
 import YT from '@/public/assets/social-media/yt-d.svg';
 import LI from '@/public/assets/social-media/li-d.svg';
 import IG from '@/public/assets/social-media/ig-d.svg';
+import dynamic from 'next/dynamic';
+import tStyles from '@/app/[lng]/textSizes.module.css';
+
+// Dynamically import ContactForm
+const ContactForm = dynamic(() => import('../_components/ContactForm'), {
+	loading: () => <p>Loading form...</p>,
+	ssr: false,
+});
+
+// Dynamically import HoAccordionPartners
+const HoAccordionPartners = dynamic(() => import('../_components/HoAccordionPartners'), {
+	loading: () => <p>Loading partners...</p>,
+	ssr: false,
+});
+
+// Dynamically import ContactFooter
+const ContactFooter = dynamic(() => import('../_components/ContactFooter'), {
+	loading: () => <p>Loading footer...</p>,
+	ssr: false,
+});
 
 export default function Contact({ params }: { params: { lng: string } }) {
 	const { lng } = params;

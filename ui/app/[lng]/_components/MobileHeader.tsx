@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
-import Link from 'next/link';
 import LocalizedLink from './LocalizedLink';
 import Open from '@/public/assets/mobile/menu-plus.svg';
 import OpenInv from '@/public/assets/mobile/menu-plus-inv.svg';

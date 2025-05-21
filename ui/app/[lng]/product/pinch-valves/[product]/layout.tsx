@@ -77,6 +77,7 @@ export default async function ProductLayout({
 	children: React.ReactNode;
 }) {
 	let schemaScript = null;
+	let preloadLink = null;
 
 	try {
 		const productData = await productService.getProduct(params.product, params.lng);
@@ -85,10 +86,14 @@ export default async function ProductLayout({
 			const imageIndex = productData.dataImages.findIndex(
 				(img) => Number(img.fileCategoryId) === 1 && img.fileName.includes('copy')
 			);
-			const imageUrl =
+			const lcpImageUrl =
 				imageIndex >= 0
 					? `${process.env.API_URL}/files/${productData.dataImages[imageIndex].id}/${productData.dataImages[imageIndex].fileName}`
 					: null;
+
+			if (lcpImageUrl) {
+				preloadLink = <link rel="preload" as="image" href={lcpImageUrl} />;
+			}
 
 			const { t: tProducts } = await UseTranslation(params.lng, 'products');
 
@@ -99,7 +104,7 @@ export default async function ProductLayout({
 				'@context': 'https://schema.org',
 				'@type': 'Product',
 				name: `${tProducts('series')} ${productData.series}`,
-				image: imageUrl,
+				image: lcpImageUrl,
 				description: productData.heading,
 				url: localizedProductUrlForSchema,
 				brand: {
@@ -125,6 +130,14 @@ export default async function ProductLayout({
 
 	return (
 		<>
+			{/* It is generally better to add links to the <head> directly in the layout if possible.
+			    However, since this is a nested layout and we need productData,
+			    injecting it here or via a client component with useEffect + react-helmet-async
+			    would be alternatives. For App Router, directly modifying <head> from server components is tricky.
+			    Let's try adding it directly here. If this doesn't work as expected (e.g. if Next.js hoists it incorrectly or it doesn't appear in <head>),
+			    we might need a client component strategy. For now, this is the simplest server-side approach.
+			*/}
+			{preloadLink}
 			{schemaScript}
 			{children}
 		</>

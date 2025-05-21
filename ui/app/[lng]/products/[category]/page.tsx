@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { useEffect, useRef, useState } from 'react';
-import FAQList from '@/app/[lng]/_components/FAQList';
+// import FAQList from '@/app/[lng]/_components/FAQList';
 import Footer from '@/app/[lng]/_components/Footer';
 import { ProductFile, productService } from '@/app/[lng]/_services/products';
 import { IProduct } from '@/app/[lng]/_services/products';
@@ -15,12 +15,11 @@ import Sleeves from '@/app/[lng]/_components/Sleeves';
 import { useTranslation } from '@/app/i18n/client';
 import { routeTranslations, fallbackLng } from '@/app/i18n/settings';
 import { productOrder } from '../../_interfaces/interfaces';
-import { PinchValvesRedefined } from '../../_components/PinchValvesRedefined';
-import { ElevateFluidControl } from '../../_components/ElevateFluidControl';
+// import { PinchValvesRedefined } from '../../_components/PinchValvesRedefined';
+// import { ElevateFluidControl } from '../../_components/ElevateFluidControl';
 import ProductsSkeleton from '../../_components/ProductsSkeleton';
 import ControlsSkeleton from '../../_components/ControlsSkeleton';
 import tStyles from '@/app/[lng]/textSizes.module.css';
-import WhyHomaticNew from '../../_components/WhyHomaticNew';
 import ShortBorder from '../../_components/ShortBorder';
 import GrayArrow from '@/public/assets/grey-arrow.svg';
 import BlueArrow from '@/public/assets/blue-arrow.svg';
@@ -28,6 +27,43 @@ import { fileService, resourcesCatIds } from '../../_services/files';
 import { isIOS, isMobile, isMobileSafari, isSafari } from 'react-device-detect';
 import { usePathname } from 'next/navigation';
 import { slugify } from '../../_utils/slugify';
+
+import dynamic from 'next/dynamic';
+
+const FAQList = dynamic(() => import('@/app/[lng]/_components/FAQList'), {
+	loading: () => <p>Loading FAQs...</p>,
+	ssr: false, // Optional: If FAQ content is not critical for SEO or first paint
+});
+
+const WhyHomaticNew = dynamic<{ lng: string }>(
+	() => import('@/app/[lng]/_components/WhyHomaticNew'),
+	{
+		loading: () => <p>Loading...</p>,
+		ssr: false,
+	}
+);
+
+const ElevateFluidControl = dynamic<{ lng: string }>(
+	() =>
+		import('@/app/[lng]/_components/ElevateFluidControl').then(
+			(mod) => mod.ElevateFluidControl
+		),
+	{
+		loading: () => <p>Loading...</p>,
+		ssr: false,
+	}
+);
+
+const PinchValvesRedefined = dynamic<{ lng: string }>(
+	() =>
+		import('@/app/[lng]/_components/PinchValvesRedefined').then(
+			(mod) => mod.PinchValvesRedefined
+		),
+	{
+		loading: () => <p>Loading...</p>,
+		ssr: false,
+	}
+);
 
 interface CadPairs {
 	dxf?: ProductFile;
@@ -297,13 +333,13 @@ export default function ProductsCategory({
 
 	const extractImageData = (dataImages: ProductFile[]) => {
 		for (let i = 0; i < dataImages.length; i++) {
-			if (dataImages[i].fileCategoryId == '1' && dataImages[i].fileName.includes('copy')) {
+			if (dataImages[i].fileCategoryId == '1') {
 				return i;
 			}
 		}
-
 		return -1;
 	};
+
 	const extractControlImageData = (dataImages: ProductFile[]) => {
 		for (let i = 0; i < dataImages.length; i++) {
 			if (dataImages[i].fileCategoryId == '1') {
@@ -656,10 +692,10 @@ export default function ProductsCategory({
 	}, [pathname]);
 
 	const header = (
-		<div className="mb-20 mt-4 grid w-full grid-cols-11 gap-x-2 px-4 py-6 max-laptop:mt-8">
+		<div className="grid w-full grid-cols-11 px-4 py-6 mt-4 mb-20 gap-x-2 max-laptop:mt-8">
 			<div className="col-span-11 lg:col-span-6"></div>
 			<div
-				className="col-span-11 grid-cols-12 lg:col-span-5 lg:grid-cols-6"
+				className="grid-cols-12 col-span-11 lg:col-span-5 lg:grid-cols-6"
 				onPointerEnter={() => {
 					setTransformItem({
 						css: 'animate-pulse ',
@@ -675,7 +711,7 @@ export default function ProductsCategory({
 
 				<div className="flex flex-row justify-end">
 					<Link
-						href={`/${lng}/${t('contact')}`}
+						href={`/${lng}/contact`}
 						className={`mt-2 flex gap-3 whitespace-nowrap text-[#306abf] transition ease-in-out hover:opacity-80 ${tStyles.cat3} ${transformItem.item === 'header' ? `${transformItem.css}` : ''}`}
 					>
 						{t('contact')}
@@ -694,9 +730,9 @@ export default function ProductsCategory({
 
 	const pinchValveSection = (
 		<>
-			<div className="mb-2 grid w-full grid-cols-11 gap-x-2 px-4">
-				<div className="col-span-11 flex w-full lg:col-span-6">
-					<div className="grid h-fit w-full grid-cols-12 gap-2 self-end laptop:text-xs laptop-l:text-xs laptop-xl:text-sm laptop-xl-extra:text-base">
+			<div className="grid w-full grid-cols-11 px-4 mb-2 gap-x-2">
+				<div className="flex w-full col-span-11 lg:col-span-6">
+					<div className="grid self-end w-full grid-cols-12 gap-2 h-fit laptop:text-xs laptop-l:text-xs laptop-xl:text-sm laptop-xl-extra:text-base">
 						<div className="relative col-span-12 grid-cols-3 border-b border-b-[#0F0F0F] tablet:col-span-3">
 							<select
 								value={size}
@@ -712,9 +748,9 @@ export default function ProductsCategory({
 									</option>
 								))}
 							</select>
-							<div className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
+							<div className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
 								<svg
-									className="h-4 w-4 text-gray-700"
+									className="w-4 h-4 text-gray-700"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -744,9 +780,9 @@ export default function ProductsCategory({
 									</option>
 								))}
 							</select>
-							<div className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
+							<div className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
 								<svg
-									className="h-4 w-4 text-gray-700"
+									className="w-4 h-4 text-gray-700"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -776,9 +812,9 @@ export default function ProductsCategory({
 									</option>
 								))}
 							</select>
-							<div className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
+							<div className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
 								<svg
-									className="h-4 w-4 text-gray-700"
+									className="w-4 h-4 text-gray-700"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -808,9 +844,9 @@ export default function ProductsCategory({
 									</option>
 								))}
 							</select>
-							<div className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
+							<div className="absolute inset-y-0 right-0 flex items-center pointer-events-none">
 								<svg
-									className="h-4 w-4 text-gray-700"
+									className="w-4 h-4 text-gray-700"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -833,9 +869,15 @@ export default function ProductsCategory({
 						value={search}
 						onChange={({ target: { value } }) => setSearch(value)}
 						placeholder={t('search')}
-						className="w-full self-end bg-transparent py-1 pb-1 outline-none"
+						className="self-end w-full py-1 pb-1 bg-transparent outline-none"
 					/>
-					<Image src={GrayArrow} alt="arrow" className="w-[4%]" />
+					<Image
+						src={GrayArrow}
+						alt="arrow"
+						width={24}
+						height={24}
+						className="h-auto w-[4%]"
+					/>
 				</div>
 			</div>
 			{isLoading ? (
@@ -986,7 +1028,7 @@ export default function ProductsCategory({
 																			<p
 																				className={`col-span-6 text-[#0F0F0F] laptop-l:col-span-4 laptop-xl+:col-span-3`}
 																			>{`${filePair.dxf?.title || filePair.stp?.title}`}</p>{' '}
-																			<div className="col-span-2 flex gap-1">
+																			<div className="flex col-span-2 gap-1">
 																				{filePair.dxf && (
 																					<Link
 																						href={`${apiUrl}/files/${filePair.dxf?.id}/${filePair.dxf?.fileName}`}
@@ -1046,12 +1088,14 @@ export default function ProductsCategory({
 										<div>
 											<Link
 												href={`/${lng}/${t('product')}/${product.id}`}
-												className="row-span-2 flex w-full justify-center"
+												className="flex justify-center w-full row-span-2"
 											>
 												<picture className="lg:w-[30vw]">
 													<img
 														src={`${process.env.API_URL}/files/${product.dataImages[extractImageData(product.dataImages)]?.id}/${product.dataImages[extractImageData(product.dataImages)]?.fileName}`}
 														alt={`Products series ${product.dataImages[extractImageData(product.dataImages)]?.alt ?? product.series}`}
+														width="600"
+														height="600"
 														className="max-laptop:px-7"
 													/>
 												</picture>
@@ -1074,7 +1118,7 @@ export default function ProductsCategory({
 												</p>
 											</div>
 										</div>
-										<div className="overwlow-clip self-start">
+										<div className="self-start overwlow-clip">
 											<p
 												className={`line-clamp-1 text-[#4877C4] ${tStyles.industries}`}
 											>
@@ -1109,7 +1153,7 @@ export default function ProductsCategory({
 							<>
 								<div className={`flex flex-col laptop:hidden`}>
 									<div className={`flex h-fit w-full items-end`}>
-										<div className="flex h-fit w-full items-center justify-end">
+										<div className="flex items-center justify-end w-full h-fit">
 											<div
 												onClick={() => {
 													setDownloadsOpen((prev) => !prev);
@@ -1242,7 +1286,7 @@ export default function ProductsCategory({
 																					<p
 																						className={`laptop-cl+:col-span-2 text-[#0F0F0F] max-laptop:col-span-5 mobile-m:col-span-4 laptop-l:col-span-2`}
 																					>{`${filePair.dxf?.title || filePair.stp?.title}`}</p>{' '}
-																					<div className="col-span-2 flex gap-1">
+																					<div className="flex col-span-2 gap-1">
 																						{filePair.dxf && (
 																							<Link
 																								href={`${apiUrl}/files/${filePair.dxf?.id}/${filePair.dxf?.fileName}`}
@@ -1304,7 +1348,7 @@ export default function ProductsCategory({
 									</div>
 									<Link
 										href={`/${lng}/${t('product')}/${product.id}`}
-										className="row-span-2 flex w-full justify-center"
+										className="flex justify-center w-full row-span-2"
 									>
 										<picture>
 											{unusedFeatures && (
@@ -1316,6 +1360,8 @@ export default function ProductsCategory({
 											<img
 												src={`${process.env.API_URL}/files/${product.dataImages[extractImageData(product.dataImages)]?.id}/${product.dataImages[extractImageData(product.dataImages)]?.fileName}`}
 												alt={`Products series ${product.dataImages[extractImageData(product.dataImages)]?.alt ?? product.series}`}
+												width="600"
+												height="600"
 												className="max-laptop:px-7"
 											/>
 										</picture>
@@ -1431,7 +1477,7 @@ export default function ProductsCategory({
 
 	const controlsSection = (
 		<>
-			<div className="relative grid w-full grid-cols-11 gap-x-2 px-4">
+			<div className="relative grid w-full grid-cols-11 px-4 gap-x-2">
 				<div className="absolute left-[54.45%] top-4 z-10 h-full w-[1px] bg-[#C8C8C8] max-laptop:hidden"></div>
 				{isLoading ? (
 					<ControlsSkeleton />
@@ -1451,7 +1497,7 @@ export default function ProductsCategory({
 											idx % 2 === 0 ? 'lg:col-span-6 ' : 'lg:col-span-5'
 										}`}
 									>
-										<div className="flex h-full flex-col justify-between space-y-1">
+										<div className="flex flex-col justify-between h-full space-y-1">
 											<p className="text-base font-medium">
 												{control.heading}
 											</p>
@@ -1460,7 +1506,7 @@ export default function ProductsCategory({
 													{control.industries}
 												</h3>
 											)}
-											<div className="flex w-full flex-row justify-center">
+											<div className="flex flex-row justify-center w-full">
 												<picture className="laptop:max-w-[20vw]">
 													{unusedFeatures && (
 														<source
@@ -1471,11 +1517,13 @@ export default function ProductsCategory({
 													<img
 														src={`${apiUrl}/files/${control.dataImages[extractControlImageData(control.dataImages)]?.id}/${control.dataImages[extractControlImageData(control.dataImages)]?.fileName}`}
 														alt={`Products series ${control.dataImages[0]?.alt ?? control.series}`}
+														width="600"
+														height="600"
 														className="laptop:max-w-[16vw]"
 													/>
 												</picture>
 											</div>
-											<div className="flex w-full items-center justify-end">
+											<div className="flex items-center justify-end w-full">
 												<button
 													className="h-fit rounded-3xl bg-[#0F0F0F] px-8 py-1 text-sm font-light text-white transition ease-in-out hover:opacity-80"
 													onClick={() => {

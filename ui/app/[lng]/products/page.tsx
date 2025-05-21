@@ -12,8 +12,14 @@ import Footer from '../_components/Footer';
 import Loader from '../_components/Loader';
 import ProductsValve from '@/public/assets/products/product-valves.webp';
 import Button from '@/public/assets/button.svg';
-import ReadyToElevate from '../_components/ReadyToElevate';
 import { usePathname } from 'next/navigation';
+import dynamic from 'next/dynamic';
+
+// Dynamically import ReadyToElevate
+const ReadyToElevate = dynamic(() => import('../_components/ReadyToElevate'), {
+	loading: () => <p>Loading...</p>,
+	ssr: false,
+});
 
 export default function Products({ params: { lng } }: { params: { lng: string } }) {
 	const { t } = useTranslation(lng, 'products');
@@ -46,7 +52,6 @@ export default function Products({ params: { lng } }: { params: { lng: string } 
 		fetchCategories();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
-	// const url = process.env.GENERAL_URL;
 
 	const [transformItem, setTransformItem] = useState<{
 		css: string;
@@ -103,6 +108,7 @@ export default function Products({ params: { lng } }: { params: { lng: string } 
 						<Image
 							src={ProductsValve}
 							alt="Products valve"
+							priority
 							className="h-fit max-h-[95vh] w-fit"
 						/>
 					</div>
@@ -141,6 +147,7 @@ export default function Products({ params: { lng } }: { params: { lng: string } 
 											<Image
 												src={Button}
 												alt="Button"
+												loading="lazy"
 												className={`${transformItem.idx === idx ? `${transformItem.css}` : ''} transition ease-in-out hover:opacity-80 laptop:w-[5vw]`}
 											/>
 										</Link>
@@ -170,6 +177,7 @@ export default function Products({ params: { lng } }: { params: { lng: string } 
 										<Image
 											src={Button}
 											alt="Button"
+											loading="lazy"
 											className={`${transformItem.idx === 5 ? `${transformItem.css}` : ''} transition ease-in-out hover:opacity-80 laptop:w-[5vw]`}
 										/>
 									</Link>
@@ -193,6 +201,7 @@ export default function Products({ params: { lng } }: { params: { lng: string } 
 								alt={`Valve`}
 								width={813}
 								height={327}
+								loading="lazy"
 								className="-mr-4 justify-self-end"
 							/>
 						</div>

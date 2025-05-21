@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ILink, IPartner, IProduct } from '../../_interfaces/interfaces';
-import ContactForm from '../../_components/ContactForm';
 import { CSSProperties, useEffect, useState } from 'react';
 import { useTranslation } from '@/app/i18n/client';
 import HomeValve from '@/public/assets/home-valve-homatic.webp';
@@ -13,6 +12,13 @@ import BlueArrow from '@/public/assets/blue-arrow.svg';
 import { usePathname } from 'next/navigation';
 import { toast, ToastContainer } from 'react-toastify';
 import { toastDefaultOptions } from '@/lib/utils';
+import dynamic from 'next/dynamic';
+
+// Dynamically import ContactForm
+const ContactForm = dynamic(() => import('../../_components/ContactForm'), {
+	loading: () => <p>Loading form...</p>,
+	ssr: false,
+});
 
 export default function VerticalScroll({ lng }: { lng: string }) {
 	const { t } = useTranslation(lng, 'horiz-scroll');
@@ -213,8 +219,9 @@ export default function VerticalScroll({ lng }: { lng: string }) {
 						<Image
 							src={product.image}
 							alt={product.heading}
-							width={500}
-							height={300}
+							width={product.width}
+							height={product.height}
+							loading="lazy"
 							className="z-10 w-[60vw] "
 						/>
 						<div
@@ -369,12 +376,7 @@ export default function VerticalScroll({ lng }: { lng: string }) {
 								</div>
 							</div>
 							<div className="order-2 flex h-full items-end pt-10">
-								<Image
-									src={logo}
-									alt="HO-Matic footer logo"
-									className="w-[50%]"
-									priority
-								/>
+								<Image src={logo} alt="HO-Matic footer logo" className="w-[50%]" />
 							</div>
 							<div className="grid h-full w-full grid-cols-2 pt-10">
 								<div className="flex flex-col space-y-5">

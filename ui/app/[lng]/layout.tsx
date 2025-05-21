@@ -54,36 +54,46 @@ export default async function RootLayout({
 	params: { lng: string };
 }) {
 	const { t } = await UseTranslation(lng, 'horiz-scroll');
+	const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
 	return (
-		<>
-			<OrganizationSchema lng={lng} />
-			<div className={`${arimo.className} bg-[#f7f7f7]`} suppressHydrationWarning={true}>
-				<CookieBanner lng={lng} />
-				<div suppressHydrationWarning className="max-laptop:hidden">
-					<Header lng={lng} path="/" />
+		<html lang={lng}>
+			<head>
+				{apiUrl && <link rel="preconnect" href={apiUrl} />}
+				{/* Other head elements can be added here if needed, though generateMetadata is preferred */}
+			</head>
+			<body>
+				<OrganizationSchema lng={lng} />
+				<div className={`${arimo.className} bg-[#f7f7f7]`} suppressHydrationWarning={true}>
+					<CookieBanner lng={lng} />
+					<div suppressHydrationWarning className="max-laptop:hidden">
+						<Header lng={lng} path="/" />
+					</div>
+					<div className="relative laptop:hidden">
+						<MobileHeader
+							lng={lng}
+							srch={t('search')}
+							prods={t('products')}
+							pvs={t('pinchValvesMn')}
+							rsc="Downloads"
+							news={t('news')}
+							about={t('about')}
+							contact={t('contact')}
+							sleevesMn={t('sleevesMn')}
+							customs={t('customSolutionsMn')}
+							controlsMn={t('controlsMn')}
+							commercials={t('commercialProductsMn')}
+						/>
+					</div>
+					<div className="h-[5vh] max-laptop:hidden"></div>
+					<div
+						className="max-laptop:pt-10 max-mobile-l:pt-0"
+						suppressHydrationWarning={true}
+					>
+						{children}
+					</div>
 				</div>
-				<div className="relative laptop:hidden">
-					<MobileHeader
-						lng={lng}
-						srch={t('search')}
-						prods={t('products')}
-						pvs={t('pinchValvesMn')}
-						rsc="Downloads"
-						news={t('news')}
-						about={t('about')}
-						contact={t('contact')}
-						sleevesMn={t('sleevesMn')}
-						customs={t('customSolutionsMn')}
-						controlsMn={t('controlsMn')}
-						commercials={t('commercialProductsMn')}
-					/>
-				</div>
-				<div className="h-[5vh] max-laptop:hidden"></div>
-				<div className="max-laptop:pt-10 max-mobile-l:pt-0" suppressHydrationWarning={true}>
-					{children}
-				</div>
-			</div>
-		</>
+			</body>
+		</html>
 	);
 }

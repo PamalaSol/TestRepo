@@ -4,6 +4,8 @@ import { authService } from '@/app/[lng]/_services/auth';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
+import Logo from '@/public/assets/logoinv.svg';
+import Image from 'next/image';
 
 const Sidebar = () => {
 	const showUnusedFeatures = false;
@@ -27,6 +29,16 @@ const Sidebar = () => {
 
 	return (
 		<div className="container flex h-full flex-col gap-3 bg-gray-800 px-10 py-8 text-white">
+			<Link
+				href={'/'}
+				title='Go to front page'
+			>
+				<Image
+					src={Logo}
+					alt="HO-Matic Logo"
+					className="w-[6vw] pb-[2px] transition ease-in-out hover:opacity-80"
+				/>
+			</Link>
 			<h2 className={`mb-3 text-2xl font-bold`}>{`Dashboard`}</h2>
 			<div className="flex h-full flex-col gap-16">
 				<div className="flex flex-col gap-5">

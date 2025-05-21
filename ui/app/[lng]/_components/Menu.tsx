@@ -1,13 +1,11 @@
 'use client';
 
-import Link from 'next/link';
 import Cart from '@/public/assets/cart-icon.svg';
 import CartInv from '@/public/assets/cart-iconinv.svg';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import DDArrow from '@/public/assets/dd-arrow.svg';
-import { orderItem } from '../_services/shop';
 import LocalizedLink from './LocalizedLink';
 import { languages, getCanonicalPath } from '@/app/i18n/settings';
 

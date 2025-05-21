@@ -27,7 +27,7 @@ export const AccordionItem = ({
 	return (
 		<div className="my-2 ">
 			<button
-				className="w-full px-4 py-1 text-left bg-gray-200 focus:outline-none"
+				className="w-full bg-gray-200 px-4 py-1 text-left focus:outline-none"
 				onClick={toggleAccordion}
 			>
 				<div className="flex items-center justify-between ">
@@ -36,12 +36,18 @@ export const AccordionItem = ({
 				</div>
 			</button>
 			<div
-				className={`overflow-hidden transition-all duration-500 ease-in-out px-4 ${
+				className={`overflow-hidden px-4 transition-all duration-500 ease-in-out ${
 					isOpen ? 'max-h-screen' : 'max-h-0'
 				}`}
 			>
-				<div className="flex justify-center w-full my-4">
-					<Image src={src} alt="Home pinch-valve" width={520} height={828} priority />
+				<div className="my-4 flex w-full justify-center">
+					<Image
+						src={src}
+						alt="Home pinch-valve"
+						width={520}
+						height={828}
+						loading="lazy"
+					/>
 				</div>
 				<div className="space-y-2">
 					<p className={tStyles.cat5}>{title}</p>
@@ -49,11 +55,15 @@ export const AccordionItem = ({
 				</div>
 				{idx !== 3 ? (
 					<div className="my-4 ">
-						<Link
-							href={link}
-							className={`${tStyles.cat2} flex justify-end `}
-						>
-							<Image src={BlueArrow} alt="Blue arrow" loading="lazy" height={500} width={500} className="w-auto h-auto" />
+						<Link href={link} className={`${tStyles.cat2} flex justify-end `}>
+							<Image
+								src={BlueArrow}
+								alt="Blue arrow"
+								loading="lazy"
+								height={500}
+								width={500}
+								className="h-auto w-auto"
+							/>
 						</Link>
 					</div>
 				) : (
