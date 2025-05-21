@@ -1,23 +1,21 @@
 import { MetadataRoute } from 'next';
-import { languages } from './i18n/settings';
+// import { languages } from './i18n/settings'; // No longer needed with this approach
 
 export default function robots(): MetadataRoute.Robots {
 	const url = process.env.GENERAL_URL;
 
-	// Allow root paths and language-specific paths
-	const allowPaths = ['/', '/robots.txt', '/sitemap.xml', ...languages];
-
 	// Dashboard paths should still be disallowed
-	const disallowPaths = ['/dashboard'];
+	const disallowPaths = ['/dashboard/']; // Using trailing slash for directory convention
 
 	return {
 		rules: [
 			{
 				userAgent: '*',
-				allow: allowPaths,
+				// By omitting the 'allow' directive, we default to allowing all paths
+				// that are not explicitly disallowed.
 				disallow: disallowPaths,
 			},
 		],
-		sitemap: `${url}/sitemap.xml`,
+		sitemap: `${url}/sitemap.xml`, // This was previously fixed
 	};
 }
