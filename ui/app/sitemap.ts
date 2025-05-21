@@ -87,10 +87,44 @@ export default async function sitemap() {
 				const products = await productService.getProducts(lang);
 				const translations = routeTranslations[lang as keyof typeof routeTranslations];
 
-				return products.map((product) => ({
-					url: `${url}/${lang}/${translations.product}/${translations['pinch-valves']}/${product.id}`,
-					lastModified: new Date(),
-				}));
+				// Mapping from category ID to canonical English slug (used in routeTranslations)
+				const categoryIdToSlugMap: Record<number, 'pinch-valves' | 'sleeves' | 'controls'> =
+					{
+						1: 'pinch-valves',
+						2: 'sleeves',
+						3: 'controls',
+						// Add other category ID mappings here if they exist
+					};
+
+				return products
+					.map((product) => {
+						const productCategoryId = product.productCategories?.[0]?.id;
+						if (!productCategoryId) {
+							console.warn(
+								`Product with ID ${product.id} has no category. Skipping from sitemap.`
+							);
+							return null; // Skip products without a category
+						}
+
+						const canonicalCategorySlug = categoryIdToSlugMap[productCategoryId];
+						if (!canonicalCategorySlug) {
+							console.warn(
+								`Product with ID ${product.id} has unknown category ID ${productCategoryId}. Defaulting to pinch-valves for sitemap, but please check.`
+							);
+							// Fallback or skip - for now, let's be explicit and potentially skip or use a known default
+							// Using pinch-valves as a fallback might still be problematic if the product isn't one.
+							// return null; // Or, more safely, skip it if category is unknown
+						}
+
+						const localizedCategorySlug =
+							translations[canonicalCategorySlug] || canonicalCategorySlug; // Fallback to canonical if translation missing for some reason
+
+						return {
+							url: `${url}/${lang}/${translations.product}/${localizedCategorySlug}/${product.id}`,
+							lastModified: new Date(),
+						};
+					})
+					.filter(Boolean); // Remove any null entries from skipped products
 			} catch (error) {
 				console.error('Error fetching products for language:', lang, error);
 				return [];

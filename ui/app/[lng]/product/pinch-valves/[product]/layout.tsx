@@ -30,7 +30,7 @@ export async function generateMetadata({
 					canonical: `${baseUrl}${getLocalizedPath(lng, '/')}`,
 					languages: {},
 				},
-				// robots: { index: false, follow: false },
+				robots: { index: false, follow: false },
 			};
 		}
 
