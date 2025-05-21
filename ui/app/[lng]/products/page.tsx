@@ -46,7 +46,7 @@ export default function Products({ params: { lng } }: { params: { lng: string } 
 		fetchCategories();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
-	const url = process.env.GENERAL_URL;
+	// const url = process.env.GENERAL_URL;
 
 	const [transformItem, setTransformItem] = useState<{
 		css: string;

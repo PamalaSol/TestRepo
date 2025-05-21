@@ -18,6 +18,6 @@ export default function robots(): MetadataRoute.Robots {
 				disallow: disallowPaths,
 			},
 		],
-		sitemap: `${url}sitemap.xml`,
+		sitemap: `${url}/sitemap.xml`,
 	};
 }

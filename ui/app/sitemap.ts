@@ -12,47 +12,47 @@ export default async function sitemap() {
 
 		return [
 			{
-				url: `${url}${lang}/`,
+				url: `${url}/${lang}/`,
 				lastModified: new Date(),
 			},
 			{
-				url: `${url}${lang}/${translations.products}`,
+				url: `${url}/${lang}/${translations.products}`,
 				lastModified: new Date(),
 			},
 			{
-				url: `${url}${lang}/${translations.products}/${translations['pinch-valves']}`,
+				url: `${url}/${lang}/${translations.products}/${translations['pinch-valves']}`,
 				lastModified: new Date(),
 			},
 			{
-				url: `${url}${lang}/${translations.products}/${translations.controls}`,
+				url: `${url}/${lang}/${translations.products}/${translations.controls}`,
 				lastModified: new Date(),
 			},
 			{
-				url: `${url}${lang}/${translations.products}/${translations.sleeves}`,
+				url: `${url}/${lang}/${translations.products}/${translations.sleeves}`,
 				lastModified: new Date(),
 			},
 			{
-				url: `${url}${lang}/${translations.resources}`,
+				url: `${url}/${lang}/${translations.resources}`,
 				lastModified: new Date(),
 			},
 			{
-				url: `${url}${lang}/${translations.news}`,
+				url: `${url}/${lang}/${translations.news}`,
 				lastModified: new Date(),
 			},
 			{
-				url: `${url}${lang}/${translations.about}`,
+				url: `${url}/${lang}/${translations.about}`,
 				lastModified: new Date(),
 			},
 			{
-				url: `${url}${lang}/${translations.contact}`,
+				url: `${url}/${lang}/${translations.contact}`,
 				lastModified: new Date(),
 			},
 			{
-				url: `${url}${lang}/${translations['site-notice']}`,
+				url: `${url}/${lang}/${translations['site-notice']}`,
 				lastModified: new Date(),
 			},
 			{
-				url: `${url}${lang}/${translations['privacy-policy']}`,
+				url: `${url}/${lang}/${translations['privacy-policy']}`,
 				lastModified: new Date(),
 			},
 		];
@@ -68,7 +68,7 @@ export default async function sitemap() {
 				return posts.map((post) => {
 					const titleSlug = slugify(post.name);
 					return {
-						url: `${url}${lang}/${localizedPostSegment}/${titleSlug}/${post.id}`,
+						url: `${url}/${lang}/${localizedPostSegment}/${titleSlug}/${post.id}`,
 						lastModified: new Date(),
 						changeFrequency: 'weekly',
 						priority: 0.8,
@@ -88,7 +88,7 @@ export default async function sitemap() {
 				const translations = routeTranslations[lang as keyof typeof routeTranslations];
 
 				return products.map((product) => ({
-					url: `${url}${lang}/${translations.product}/${translations['pinch-valves']}/${product.id}`,
+					url: `${url}/${lang}/${translations.product}/${translations['pinch-valves']}/${product.id}`,
 					lastModified: new Date(),
 				}));
 			} catch (error) {
