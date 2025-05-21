@@ -1,1 +1,1 @@
-export const baseUrl = 'https://ho-matic.ch';
+export const baseUrl = 'https://test-repo-ngt8sx2aw-pamalasols-projects.vercel.app';
