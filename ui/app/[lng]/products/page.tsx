@@ -12,14 +12,8 @@ import Footer from '../_components/Footer';
 import Loader from '../_components/Loader';
 import ProductsValve from '@/public/assets/products/product-valves.webp';
 import Button from '@/public/assets/button.svg';
+import ReadyToElevate from '../_components/ReadyToElevate';
 import { usePathname } from 'next/navigation';
-import dynamic from 'next/dynamic';
-
-// Dynamically import ReadyToElevate
-const ReadyToElevate = dynamic(() => import('../_components/ReadyToElevate'), {
-	loading: () => <p>Loading...</p>,
-	ssr: false,
-});
 
 export default function Products({ params: { lng } }: { params: { lng: string } }) {
 	const { t } = useTranslation(lng, 'products');
@@ -108,7 +102,6 @@ export default function Products({ params: { lng } }: { params: { lng: string } 
 						<Image
 							src={ProductsValve}
 							alt="Products valve"
-							priority
 							className="h-fit max-h-[95vh] w-fit"
 						/>
 					</div>
@@ -118,7 +111,7 @@ export default function Products({ params: { lng } }: { params: { lng: string } 
 							<p className={tStyles.cat3}>{t('description')}</p>
 						</div>
 
-						<div className="mt-16 flex flex-col">
+						<div className="flex flex-col mt-16">
 							{categories.map((category, idx) => (
 								<div
 									className={`grid grid-cols-12 border-t border-[#C8C8C8] py-7`}
@@ -130,7 +123,7 @@ export default function Products({ params: { lng } }: { params: { lng: string } 
 										setTransformItem({ css: '', idx: 0, item: '' });
 									}}
 								>
-									<div className="col-span-8 flex h-full items-center">
+									<div className="flex items-center h-full col-span-8">
 										<div className="flex flex-col laptop:w-[85%]">
 											<h3 className={`pb-3 ${tStyles.cat2}`}>
 												{category.name}
@@ -138,8 +131,8 @@ export default function Products({ params: { lng } }: { params: { lng: string } 
 											<p className={tStyles.cat3}>{category.description}</p>
 										</div>
 									</div>
-									<div className="col-span-2 grid-cols-2"></div>
-									<div className="col-span-2 flex h-full items-center max-laptop:justify-end">
+									<div className="grid-cols-2 col-span-2"></div>
+									<div className="flex items-center h-full col-span-2 max-laptop:justify-end">
 										<Link
 											href={`/${lng}/${t('products')}/${category.id === 1 ? 'pinch-valves' : category.id === 2 ? 'sleeves' : 'controls'}`}
 											className="w-[10vw]"
@@ -147,7 +140,6 @@ export default function Products({ params: { lng } }: { params: { lng: string } 
 											<Image
 												src={Button}
 												alt="Button"
-												loading="lazy"
 												className={`${transformItem.idx === idx ? `${transformItem.css}` : ''} transition ease-in-out hover:opacity-80 laptop:w-[5vw]`}
 											/>
 										</Link>
@@ -165,19 +157,18 @@ export default function Products({ params: { lng } }: { params: { lng: string } 
 									setTransformItem({ css: '', idx: 0, item: '' });
 								}}
 							>
-								<div className="col-span-8 flex h-full items-center">
+								<div className="flex items-center h-full col-span-8">
 									<div className="flex flex-col laptop:w-full">
 										<h3 className={`pb-3 ${tStyles.cat2}`}>{t('customSol')}</h3>
 										<p className={tStyles.cat3}>{t('customSolDesc')}</p>
 									</div>
 								</div>
-								<div className="col-span-2 grid-cols-2"></div>
-								<div className="col-span-2 flex h-full items-center max-laptop:justify-end">
+								<div className="grid-cols-2 col-span-2"></div>
+								<div className="flex items-center h-full col-span-2 max-laptop:justify-end">
 									<Link href={`/${lng}/contact`} className="w-[10vw]">
 										<Image
 											src={Button}
 											alt="Button"
-											loading="lazy"
 											className={`${transformItem.idx === 5 ? `${transformItem.css}` : ''} transition ease-in-out hover:opacity-80 laptop:w-[5vw]`}
 										/>
 									</Link>
@@ -187,7 +178,7 @@ export default function Products({ params: { lng } }: { params: { lng: string } 
 					</div>
 				</section>
 			) : (
-				<div className="flex h-screen w-full justify-center" id="loader">
+				<div className="flex justify-center w-full h-screen" id="loader">
 					<Loader />
 				</div>
 			)}
@@ -201,7 +192,6 @@ export default function Products({ params: { lng } }: { params: { lng: string } 
 								alt={`Valve`}
 								width={813}
 								height={327}
-								loading="lazy"
 								className="-mr-4 justify-self-end"
 							/>
 						</div>

@@ -341,7 +341,7 @@ export default function Product({ params }: { params: { product: string; lng: st
 
 	const settingsGrid = (
 		<div className="grid-rows-auto grid grid-cols-12 border-[#0F0F0F] text-center">
-			<div className="col-span-12 grid grid-cols-12">
+			<div className="grid grid-cols-12 col-span-12">
 				<div className="col-span-1 border-l border-t border-[#0F0F0F] bg-[#F7F7F7] max-laptop:text-[0.6rem]">
 					<p>{t('series')}</p>
 				</div>
@@ -366,13 +366,13 @@ export default function Product({ params }: { params: { product: string; lng: st
 					</div>
 				</div>
 				<div className="col-span-2 border-r border-t border-[#0F0F0F] bg-[#F7F7F7] max-laptop:text-[0.6rem]">
-					<div className="grid h-full grid-rows-2 content-between">
+					<div className="grid content-between h-full grid-rows-2">
 						<p>{t('version')}</p>
 						<p>{t('standard')}</p>
 					</div>
 				</div>
 			</div>
-			<div className="col-span-12 grid grid-cols-12">
+			<div className="grid grid-cols-12 col-span-12">
 				<div className="col-span-1 flex items-center justify-center border-y border-l border-[#0F0F0F] bg-[#F7F7F7] text-sm">
 					<p>{series[localSeries]?.seriesNum}</p>
 				</div>
@@ -396,7 +396,7 @@ export default function Product({ params }: { params: { product: string; lng: st
 				<div
 					className={`col-span-10 grid grid-cols-10 ${series[localSeries]?.v2Name ? 'grid-rows-2' : 'grid-rows-1'} bg-white`}
 				>
-					<div className="col-span-10 grid grid-cols-10">
+					<div className="grid grid-cols-10 col-span-10">
 						<div className="col-span-8 border-x border-y border-[#0F0F0F]">
 							<div className="grid h-full grid-cols-8">
 								{series[localSeries]?.qualities.map((quality, idx) => (
@@ -421,7 +421,7 @@ export default function Product({ params }: { params: { product: string; lng: st
 							</div>
 						</div>
 						<div className="col-span-2 border-y border-r border-[#0F0F0F] bg-[#F7F7F7]">
-							<div className="col-span-1 flex h-full w-full flex-col items-center justify-around">
+							<div className="flex flex-col items-center justify-around w-full h-full col-span-1">
 								{series[localSeries]?.version.num.map((ver) => (
 									<div
 										key={`quality-${ver}`}
@@ -456,7 +456,7 @@ export default function Product({ params }: { params: { product: string; lng: st
 							<div
 								className={`col-span-4 row-span-2 flex h-full flex-col justify-around`}
 							>
-								<div className="grid h-full w-full grid-cols-4">
+								<div className="grid w-full h-full grid-cols-4">
 									{series[localSeries]?.v2Qualities?.map((quality, idx) => (
 										<div
 											key={`quality-${quality.name}`}
@@ -496,7 +496,7 @@ export default function Product({ params }: { params: { product: string; lng: st
 							<p className="border-b border-[#0F0F0F] max-laptop:text-[0.6rem]">
 								ATEX
 							</p>
-							<div className="col-span-1 flex h-full w-full flex-col items-center justify-around">
+							<div className="flex flex-col items-center justify-around w-full h-full col-span-1">
 								{series[localSeries]?.v2Name?.num.map((ver) => (
 									<div
 										key={`quality-${ver}`}
@@ -545,8 +545,8 @@ export default function Product({ params }: { params: { product: string; lng: st
 	return (
 		<>
 			{!isLoading ? (
-				<div className="mt-6 grid grid-cols-11 px-4 py-6">
-					<div className="col-span-11 grid-cols-12 lg:col-span-6 lg:grid-cols-6">
+				<div className="grid grid-cols-11 px-4 py-6 mt-6">
+					<div className="grid-cols-12 col-span-11 lg:col-span-6 lg:grid-cols-6">
 						<div className="ultrawide:justify-start flex flex-col justify-around lg:fixed lg:h-[90vh] lg:w-[50vw] laptop-xl+:justify-between">
 							<div className="flex w-full">
 								<div className="flex w-[80%] flex-col lg:w-[40vw]">
@@ -571,18 +571,16 @@ export default function Product({ params }: { params: { product: string; lng: st
 										<img
 											key={images[photoActive].id}
 											className={`ultrawide-mt ultrawide-h`}
-											src={`${process.env.API_URL}/files/${images[photoActive]?.id}/${images[photoActive]?.fileName}`}
+											src={`${process.env.API_URL}/files/${images[photoActive]?.id}/${images[photoActive]?.fileName}?t=${new Date().getTime()}`}
 											alt={`${images[photoActive]?.alt}`}
-											width="600"
-											height="600"
 										/>
 									) : (
 										<LoadingAnimation />
 									)}
 								</picture>
 							</div>
-							<div className="ultrawide-bg z-20 grid grid-cols-12">
-								<div className="col-span-2 grid-cols-2 max-laptop:hidden lg:col-span-1 lg:grid-cols-1">
+							<div className="z-20 grid grid-cols-12 ultrawide-bg">
+								<div className="grid-cols-2 col-span-2 max-laptop:hidden lg:col-span-1 lg:grid-cols-1">
 									<div className="flex flex-col space-y-3 max-lg:hidden">
 										<button
 											className="transition ease-in-out hover:opacity-80"
@@ -625,8 +623,8 @@ export default function Product({ params }: { params: { product: string; lng: st
 										</button>
 									</div>
 								</div>
-								<div className="col-span-12 my-4 w-full laptop:hidden">
-									<div className="flex w-full items-center justify-between">
+								<div className="w-full col-span-12 my-4 laptop:hidden">
+									<div className="flex items-center justify-between w-full">
 										<button
 											className=""
 											onClick={() => {
@@ -668,7 +666,7 @@ export default function Product({ params }: { params: { product: string; lng: st
 										</button>
 									</div>
 								</div>
-								<div className="col-span-12 h-fit w-full self-center max-laptop:space-y-3 tablet:ml-4 lg:col-span-11 lg:ml-6">
+								<div className="self-center w-full col-span-12 h-fit max-laptop:space-y-3 tablet:ml-4 lg:col-span-11 lg:ml-6">
 									<div className="w-full grid-cols-9 laptop:grid">
 										<p
 											className={`col-span-3 laptop-l:col-span-4 ${tStyles.pvDetailHeading}`}
@@ -808,19 +806,17 @@ export default function Product({ params }: { params: { product: string; lng: st
 						</div>
 						<div className="flex flex-col space-y-5 laptop:pl-1">
 							<div className="mt-8 h-[1px] w-full bg-[#C8C8C8]"></div>
-							<div className="flex w-full flex-col pb-10">
+							<div className="flex flex-col w-full pb-10">
 								<p className={tStyles.cat4}>{t('dimensions')}</p>
 								{dimensions[0] ? (
 									// eslint-disable-next-line @next/next/no-img-element
 									<img
 										src={`${process.env.API_URL}/files/${dimensions[0]?.id}/${dimensions[0]?.fileName}`}
 										alt={`${t('series')} ${productData?.series} ${t('dimensions')}`}
-										width="600"
-										height="400"
 										className="self-center"
 									/>
 								) : (
-									<div className="flex w-full justify-center">
+									<div className="flex justify-center w-full">
 										<LoadingAnimation />
 									</div>
 								)}
@@ -830,7 +826,7 @@ export default function Product({ params }: { params: { product: string; lng: st
 								<HoAccordion title={t('controls')}>
 									<Link
 										href={`/${lng}/products/controls`}
-										className="flex w-full items-center justify-around hover:cursor-pointer"
+										className="flex items-center justify-around w-full hover:cursor-pointer"
 									>
 										<picture className="">
 											{false && (
@@ -986,7 +982,7 @@ export default function Product({ params }: { params: { product: string; lng: st
 																key={`${idx} ${filePair.dxf ? 'dxf' : 'stp'}`}
 															>
 																<p className="col-span-3 text-[#0F0F0F] max-mobile-l:col-span-4 laptop-l:col-span-2 laptop-xl+:col-span-2">{`${filePair.dxf?.title || filePair.stp?.title}`}</p>{' '}
-																<div className="col-span-2 flex gap-1">
+																<div className="flex col-span-2 gap-1">
 																	{filePair.dxf && (
 																		<Link
 																			href={`${apiUrl}/files/${filePair.dxf?.id}/${filePair.dxf?.fileName}`}
@@ -1013,7 +1009,7 @@ export default function Product({ params }: { params: { product: string; lng: st
 												)}
 												{otherCadFiles?.map((file, idx) => (
 													<div
-														className="grid w-full grid-cols-12 items-center justify-start"
+														className="grid items-center justify-start w-full grid-cols-12"
 														key={file.id}
 													>
 														<p
@@ -1058,7 +1054,7 @@ export default function Product({ params }: { params: { product: string; lng: st
 					</div>
 				</div>
 			) : (
-				<div className="flex w-full items-center justify-center">
+				<div className="flex items-center justify-center w-full">
 					<Loader />
 				</div>
 			)}

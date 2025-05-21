@@ -245,7 +245,10 @@ export default function Cart({ params: { lng } }: { params: { lng: string } }) {
 			toast.error(t('infoMissingMsg'), toastDefaultOptions);
 			setFlag((prev) => !prev);
 			return false;
-		} else if (!emailRegex.test(customerEmail)) {
+		} else if (
+			!emailRegex.test(customerEmail)
+			
+		) {
 			toast.error(t('emailError'), toastDefaultOptions);
 			return false;
 		} else if (hasEmptyExtraReq()) {
@@ -265,7 +268,7 @@ export default function Cart({ params: { lng } }: { params: { lng: string } }) {
 		<div className={`mt-4 p-4 max-laptop:relative max-laptop:mt-[5vh]`}>
 			<div className={`grid grid-cols-11 gap-3`}>
 				<div
-					className="relative z-10 col-span-6 flex overflow-clip max-laptop:col-span-11"
+					className="relative z-10 flex col-span-6 overflow-clip max-laptop:col-span-11"
 					ref={relativeRef}
 				>
 					<div
@@ -469,6 +472,7 @@ export default function Cart({ params: { lng } }: { params: { lng: string } }) {
 										onChange={(event) => setShippingCountry(event.target.value)}
 									/>
 								</div>
+								
 							</div>
 						</div>
 						<div className={`mt-6`}>
@@ -509,17 +513,17 @@ export default function Cart({ params: { lng } }: { params: { lng: string } }) {
 					{t('orders')}
 				</p>
 				{isLoading ? (
-					<div className="col-span-5 mt-10 flex w-full items-center justify-center">
+					<div className="flex items-center justify-center w-full col-span-5 mt-10">
 						<strong>Loading items...</strong>
 					</div>
 				) : orders.length < 1 ? (
-					<div className="col-span-5 mt-10 flex w-full items-center justify-center">
+					<div className="flex items-center justify-center w-full col-span-5 mt-10">
 						<strong>{t('emptyCart')}</strong>
 					</div>
 				) : (
 					<div className={`col-span-5 max-laptop:relative`}>
 						{captchaPopupOpen && (
-							<div className="fixed inset-0 z-30 flex h-screen w-full items-center justify-center ">
+							<div className="fixed inset-0 z-30 flex items-center justify-center w-full h-screen ">
 								<div
 									className="absolute inset-0  z-30 h-[110vh] w-[screen]  opacity-50 laptop:bg-gray-500"
 									onClick={() => {
@@ -546,20 +550,17 @@ export default function Cart({ params: { lng } }: { params: { lng: string } }) {
 											<StaticImage
 												src={SleeveImage}
 												alt="sleeve"
-												loading="lazy"
 												className="col-span-2 w-[75%]  scale-75 max-laptop:col-span-6"
 											/>
 										</>
 									) : (
 										<>
-											<picture className="col-span-2 flex items-center justify-center overflow-hidden pr-2 max-laptop:col-span-6">
+											<picture className="flex items-center justify-center col-span-2 pr-2 overflow-hidden max-laptop:col-span-6">
 												<img
-													src={`${process.env.NEXT_PUBLIC_API_URL}/files/${order.imgString}/fillerText`}
+													src={`${apiUrl}/files/${order.imgString}/fillerText`}
 													alt={`Products series ${order.imgString}`}
-													width="100"
-													height="100"
-													loading="lazy"
-													className={`max-h-[200px] max-w-[200px] object-contain`}
+													className={`
+														max-h-[200px] max-w-[200px] `}
 												/>
 											</picture>
 										</>
@@ -587,7 +588,7 @@ export default function Cart({ params: { lng } }: { params: { lng: string } }) {
 											placeholder={t('extraInfo')}
 										/>
 									</div>
-									<div className="col-span-1 flex items-center justify-center ">
+									<div className="flex items-center justify-center col-span-1 ">
 										<input
 											type="number"
 											name="amount"
@@ -606,7 +607,7 @@ export default function Cart({ params: { lng } }: { params: { lng: string } }) {
 											className="w-[3vw] border-b border-b-[#0F0F0F] bg-[#f7f7f7] pl-2 max-tablet:w-[80%] "
 										/>
 									</div>
-									<div className="items-cetner col-span-1 flex w-full justify-end">
+									<div className="flex justify-end w-full col-span-1 items-cetner">
 										<StaticImage
 											src={DeleteButton}
 											alt="delete button"

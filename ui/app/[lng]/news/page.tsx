@@ -144,9 +144,6 @@ export default function News({ params }: { params: { lng: string } }) {
 												<img
 													src={post.dataImage ? post.dataImage : ''}
 													alt={post.name}
-													width="600"
-													height="400"
-													loading="lazy"
 													className="h-[40vh] max-laptop:px-7"
 												/>
 											</picture>
@@ -212,9 +209,6 @@ export default function News({ params }: { params: { lng: string } }) {
 												<img
 													src={post.dataImage ? post.dataImage : ''}
 													alt={post.name}
-													width="600"
-													height="400"
-													loading="lazy"
 													className=""
 												/>
 											</picture>
