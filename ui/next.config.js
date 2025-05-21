@@ -14,9 +14,9 @@ const nextConfig = {
 			{ source: '/fr/', destination: '/fr-FR', permanent: true },
 
 			// Old post URLs to new structure - handled by middleware dynamically
-			{ source: '/:lng/post/:post', destination: '/:lng/post/:post', permanent: false },
-			{ source: '/:lng/beitrag/:post', destination: '/:lng/beitrag/:post', permanent: false },
-			{ source: '/:lng/article/:post', destination: '/:lng/article/:post', permanent: false },
+			// { source: '/:lng/post/:post', destination: '/:lng/post/:post', permanent: false },
+			// { source: '/:lng/beitrag/:post', destination: '/:lng/beitrag/:post', permanent: false },
+			// { source: '/:lng/article/:post', destination: '/:lng/article/:post', permanent: false },
 
 			{ source: '/ueber-uns/firma', destination: '/de-DE/about', permanent: true },
 			{ source: '/en/about-us/company', destination: '/en-US/about', permanent: true },

@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
 	const url = process.env.GENERAL_URL;
 
 	// Allow root paths and language-specific paths
-	const allowPaths = ['/', ...languages];
+	const allowPaths = ['/', '/robots.txt', '/sitemap.xml', ...languages];
 
 	// Dashboard paths should still be disallowed
 	const disallowPaths = ['/dashboard'];

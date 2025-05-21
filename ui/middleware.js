@@ -204,7 +204,7 @@ export async function middleware(req) {
 	}
 
 	if (!languages.some((loc) => req.nextUrl.pathname.startsWith(`/${loc}`))) {
-		return NextResponse.redirect(new URL(`/de-DE`, req.url), { status: 307 });
+		return NextResponse.redirect(new URL(`/de-DE`, req.url), { status: 301 });
 	}
 
 	// Handle special case for post language switching
