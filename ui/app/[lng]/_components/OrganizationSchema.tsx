@@ -35,10 +35,10 @@ export default function OrganizationSchema({ lng }: OrganizationSchemaProps) {
 		const orgDescription = descriptions[langCode as SupportedLanguage] || descriptions['de-DE'];
 
 		// Organization URL
-		const orgUrl = `https://ho-matic.ch/${langCode}/`;
+		const orgUrl = `${process.env.GENERAL_URL || 'https://ho-matic.ch'}/${langCode}/`;
 
 		// Organization logo
-		const orgLogo = `${baseUrl}/assets/logo.svg`;
+		const orgLogo = `${process.env.GENERAL_URL || 'https://ho-matic.ch'}/assets/logo.svg`;
 
 		// Organization social profiles
 		const orgSocialProfiles = [
