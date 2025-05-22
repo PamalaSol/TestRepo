@@ -87,7 +87,12 @@ export default async function sitemap() {
 				const products = await productService.getProducts(lang);
 				const translations = routeTranslations[lang as keyof typeof routeTranslations];
 
-				return products.map((product) => ({
+				// Filter for actual pinch valve products
+				const pinchValveProducts = products.filter(
+					(product) => product.productCategories[0]?.id === 1
+				);
+
+				return pinchValveProducts.map((product) => ({
 					url: `${url}/${lang}/${translations.product}/${translations['pinch-valves']}/${product.id}`,
 					lastModified: new Date(),
 				}));
