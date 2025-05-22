@@ -12,7 +12,7 @@ export default async function sitemap() {
 
 		return [
 			{
-				url: `${url}/${lang}/`,
+				url: `${url}/${lang}`,
 				lastModified: new Date(),
 			},
 			{
