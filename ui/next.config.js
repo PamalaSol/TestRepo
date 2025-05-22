@@ -2,6 +2,7 @@
 const apiUrl = process.env.API_URL;
 
 const nextConfig = {
+	trailingSlash: true,
 	reactStrictMode: false,
 	swcMinify: true,
 	env: {
