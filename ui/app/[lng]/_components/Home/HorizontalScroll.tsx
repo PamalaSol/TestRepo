@@ -196,7 +196,7 @@ export default function HorizontalScroll({ lng }: { lng: string }) {
 
 	return (
 		<div className="overflow-hidden max-lg:hidden" suppressHydrationWarning>
-			<div ref={triggerRef} className="z-10 flex h-[100vh] items-end ">
+			<div ref={triggerRef} className="z-10 flex h-[100vh] items-end">
 				<div ref={sectionRef} className="">
 					<div className={`relative flex h-[97vh] w-[500vw]`}>
 						<section

@@ -54,7 +54,6 @@ export default async function LngLayout({
 	params: { lng: string };
 }) {
 	const { t } = await UseTranslation(lng, 'horiz-scroll');
-	const apiUrl = process.env.NEXT_PUBLIC_API_URL; // Preconnect link will be moved
 
 	return (
 		<div className={`${arimo.className} bg-[#f7f7f7]`} suppressHydrationWarning={true}>
@@ -79,9 +78,9 @@ export default async function LngLayout({
 				/>
 			</div>
 			<OrganizationSchema lng={lng} />
-			<div></div>
+			<div className="h-[5vh] max-laptop:hidden"></div>
 			<div
-				className="max-laptop:pt-10 max-mobile-l:pt-0 "
+				className="max-laptop:pt-10 max-mobile-l:pt-0"
 				suppressHydrationWarning={true}
 			>
 				{children}

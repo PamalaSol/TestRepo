@@ -7,7 +7,7 @@ import DisableZoom from './_components/Home/DisableZoom';
 export default function Home({ params: { lng } }: { params: { lng: string } }) {
 	return (
 		<div>
-			<div className="max-lg:hidden" suppressHydrationWarning>
+			<div className="-mt-[5vh] max-lg:hidden" suppressHydrationWarning>
 				<DisableZoom />
 				<HorizontalScroll lng={lng} />
 			</div>
