@@ -1,16 +1,13 @@
 import 'react-toastify';
 import GoogleAnalytics from './[lng]/_components/GoogleAnalytics';
 
-export default async function RootLayout({
-	children,
-	params: { lng },
-}: {
-	children: React.ReactNode;
-	params: { lng: string };
-}) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+	const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
 	return (
 		<html lang={'de-DE'} className="bg-[#f7f7f7]">
 			<head>
+				{apiUrl && <link rel="preconnect" href={apiUrl} />}
 				<GoogleAnalytics />
 			</head>
 			<body>

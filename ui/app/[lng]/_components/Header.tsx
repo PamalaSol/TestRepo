@@ -68,12 +68,12 @@ export const Header = ({ lng, path = '' }: { lng: string; path: string }) => {
 	}, []);
 
 	return (
-		<header className="fixed z-50 w-[99.99%] lg:h-[5vh]" suppressHydrationWarning={true}>
+		<header className="fixed z-50 w-full lg:h-[5vh]" suppressHydrationWarning={true}>
 			<div
 				id="contrast"
 				className={`${invBg ? 'inverted-contrast' : 'normal-contrast'} grid w-full grid-cols-11 items-end px-4 pb-2 pt-2 lg:gap-y-0 laptop:gap-x-2 laptop:pt-3`}
 			>
-				<div className="grid items-end grid-cols-12 col-span-10 gap-x-3 lg:col-span-6 lg:grid-cols-6">
+				<div className="col-span-10 grid grid-cols-12 items-end gap-x-3 lg:col-span-6 lg:grid-cols-6">
 					<div
 						className={`col-span-4 border-b ${invBg ? 'border-b-[#F7F7F7]' : 'border-b-[#0F0F0F]'}  max-laptop:hidden lg:col-span-2 `}
 					>
@@ -98,7 +98,7 @@ export const Header = ({ lng, path = '' }: { lng: string; path: string }) => {
 						suppressHydrationWarning={true}
 					>
 						<Search lng={lng} srch={t('search')} invBg={invBg} />
-						<div className="flex items-center justify-end col-span-1">
+						<div className="col-span-1 flex items-center justify-end">
 							<Image src={GrayArrow} alt="arrow" className="w-1/2" />
 						</div>
 					</div>
