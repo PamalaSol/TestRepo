@@ -333,7 +333,7 @@ export default function ProductsCategory({
 
 	const extractImageData = (dataImages: ProductFile[]) => {
 		for (let i = 0; i < dataImages.length; i++) {
-			if (dataImages[i].fileCategoryId == '1') {
+			if (dataImages[i].fileCategoryId == '1' && dataImages[i].fileName.includes('copy')) {
 				return i;
 			}
 		}
@@ -346,7 +346,6 @@ export default function ProductsCategory({
 				return i;
 			}
 		}
-
 		return -1;
 	};
 
